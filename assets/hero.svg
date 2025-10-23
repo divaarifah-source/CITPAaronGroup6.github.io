@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9fd3f2" />
+      <stop offset="100%" stop-color="#cfeef9" />
+    </linearGradient>
+    <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0480b8" />
+      <stop offset="100%" stop-color="#01607f" />
+    </linearGradient>
+    <linearGradient id="land" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e9decf"/>
+      <stop offset="100%" stop-color="#d7c4a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sky)" />
+  <g transform="translate(0,220)">
+    <rect x="0" y="120" width="1600" height="380" fill="url(#sea)" />
+    <!-- simple mangrove silhouettes -->
+    <g fill="#083" opacity="0.85">
+      <path d="M120 200 c10 -30 40 -50 60 -40 c20 10 40 30 50 40 c-30 -5 -75 5 -110 0 z" transform="translate(0,20)" />
+      <path d="M420 180 c8 -25 32 -40 50 -30 c18 10 36 28 46 36 c-25 -4 -62 4 -96 -6 z" transform="translate(0,30)" />
+      <path d="M760 170 c12 -28 45 -48 70 -36 c25 12 48 34 64 44 c-34 -6 -88 6 -134 -8 z" transform="translate(0,40)" />
+      <path d="M1100 190 c10 -26 38 -44 58 -34 c20 10 38 26 50 34 c-28 -5 -70 4 -108 0 z" transform="translate(0,24)" />
+    </g>
+    <!-- shoreline -->
+    <path d="M0 240 Q200 220 400 240 T800 240 T1200 240 T1600 240 L1600 600 L0 600 Z" fill="url(#land)" opacity="0.95" />
+  </g>
+</svg>

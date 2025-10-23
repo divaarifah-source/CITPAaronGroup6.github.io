@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Website</title>
+  <!-- Redirect root to exec.html (Primary landing) -->
+  <meta http-equiv="refresh" content="0; url=exec.html" />
+  <script>
+    /* Fallback JS redirect for browsers */
+    try {
+      const p = location.pathname.toLowerCase();
+      if (p === '/' || p.endsWith('/index.html') || p === '/index.html') {
+        location.replace('exec.html');
+      }
+    } catch (e) { /* noop */ }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+        <a class="navbar-brand" href="exec.html"><span style="color:var(--mangrove-600);margin-right:.4rem;font-weight:800">EWB Challenge - IRCS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <noscript>
+      <p style="padding:1rem;max-width:60ch;margin:0 auto;text-align:center;background:rgba(255,255,255,0.02);border-radius:8px">JavaScript is disabled — <a href="exec.html">Click here to view the IRCS Executive Summary</a>.</p>
+    </noscript>
+    <section class="hero container" id="home">
+      <h2>Build. Iterate. Learn.</h2>
+      <p>Welcome to my project site — a showcase of recent work and notes.</p>
+      <p><a class="btn" href="#projects">See projects</a></p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Project One</h4>
+          <p>A short description of project one with technologies used.</p>
+          <p><a href="#" class="btn small">View</a></p>
+        </article>
+        <article class="card">
+          <h4>Project Two</h4>
+          <p>Brief summary of project two. Add links to source or demo.</p>
+          <p><a href="#" class="btn small">View</a></p>
+        </article>
+        <article class="card">
+          <h4>Project Three</h4>
+          <p>Notes or status for the third project.</p>
+          <p><a href="#" class="btn small">View</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About</h3>
+      <p>I'm a developer/designer focusing on building useful web apps. This site is a minimal scaffold you can extend.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <form id="contact-form" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <button type="submit" class="btn">Send</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">IRCS</div>
+        <div>
+          <p class="footer-title">IRCS Project</p>
+          <p class="footer-subtitle">Saibai Island Community</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
+        <p class="footer-client">Client: Torres Strait Regional Council · Integrated Restorative Coastal System</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

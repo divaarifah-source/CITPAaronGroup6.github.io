@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRCS — Technical Annex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+        <a class="navbar-brand" href="exec.html"><span style="color:var(--mangrove-600);margin-right:.4rem;font-weight:800">EWB Challenge - IRCS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
+            <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
+            <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+            <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
+            <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="annex-hero" aria-labelledby="annex-title">
+      <div class="container annex-hero-inner">
+        <p class="annex-kicker">Technical Annex</p>
+        <h1 id="annex-title">Technical Annex: Engineering the Integrated Regenerative Coastal System (IRCS)</h1>
+        <p class="lead">Detailed documentation of design methods, materials, and validation experiments supporting the IRCS solution.</p>
+        <div class="annex-tags" aria-label="Annex focus areas">
+          <span class="annex-tag">Hydrology</span>
+          <span class="annex-tag">Ecology</span>
+          <span class="annex-tag">Community Engineering</span>
+        </div>
+        <figure class="annex-banner" aria-labelledby="annex-banner-caption">
+          <figcaption id="annex-banner-caption">Brushwood bund cross-section &mdash; replace with final schematic artwork.</figcaption>
+          <div class="annex-banner-art" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="annex-section system-overview" id="system-overview">
+      <div class="container">
+        <header class="section-header">
+          <h2>System Overview Diagram</h2>
+          <p class="section-lead">The IRCS combines tidal restoration, engineered bunds, and ecological regeneration into a single adaptive shoreline system.</p>
+        </header>
+        <figure class="mermaid-figure" aria-labelledby="ircs-overview-caption">
+          <div class="mermaid" role="img" aria-label="Tidal channel reopening flows through brushwood bunds to trap sediment and grow mangroves.">
+flowchart LR
+    A["Tidal Channel Reopening"] --> B["Brushwood Bund Installation"]
+    B --> C["Sediment Trapping Zone"]
+    C --> D["Mangrove Establishment"]
+    D --> E["Stable & Self-Sustaining Shoreline"]
+
+    classDef hydrology fill:#cde7ff,stroke:#2a577a,stroke-width:1px,color:#0b2b3a;
+    classDef geomorph fill:#f5e3c2,stroke:#946f38,stroke-width:1px,color:#4d3414;
+    classDef ecology fill:#cdeed9,stroke:#2f8f54,stroke-width:1px,color:#145030;
+    class A hydrology;
+    class B,C geomorph;
+    class D,E ecology;
+          </div>
+          <figcaption id="ircs-overview-caption"><em>Figure 1:</em> The IRCS hybrid system &mdash; combining ecological restoration and low-impact coastal engineering.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="annex-section component-section" id="components">
+      <div class="container">
+        <header class="section-header">
+          <h2>Component Breakdown</h2>
+          <p class="section-lead">Technical details by phase show how hydrology, materials, and stewardship align to regenerate Saibai&rsquo;s shoreline.</p>
+        </header>
+        <div class="component-grid">
+          <article class="component-card">
+            <div class="component-head">
+              <h3>3.1 Foundational Preparation</h3>
+              <div class="component-labels">
+                <span class="component-label blue">Hydrology</span>
+                <span class="component-label brown">Geomorphology</span>
+              </div>
+            </div>
+            <div class="component-body">
+              <h4>Techniques</h4>
+              <ul class="component-list">
+                <li><strong>Tidal Channel Reopening:</strong> Clear blocked creeks to reinstate tidal exchange, nutrient flow, and saline flushing.</li>
+                <li><strong>Sediment Nourishment:</strong> Place locally sourced sand and mud to rebuild tidal flats and raise elevations.</li>
+              </ul>
+            </div>
+            <div class="component-body">
+              <h4>Key Engineering Parameters</h4>
+              <ul class="component-list">
+                <li>Channel depth: 0.5&ndash;1.2&nbsp;m depending on site gradient.</li>
+                <li>Sediment particle size: 0.2&ndash;1.0&nbsp;mm (fine sand for cohesive healing).</li>
+                <li>Preferred source: Reused dredge spoil from tidal channel clearing.</li>
+              </ul>
+            </div>
+            <figure class="component-figure" aria-labelledby="component-figure-1">
+              <figcaption id="component-figure-1">Placeholder &mdash; insert tidal channel plan sketch.</figcaption>
+              <div class="component-placeholder" aria-hidden="true">Foundational sketch</div>
+            </figure>
+          </article>
+
+          <article class="component-card">
+            <div class="component-head">
+              <h3>3.2 Structural Protection</h3>
+              <div class="component-labels">
+                <span class="component-label brown">Bund Engineering</span>
+                <span class="component-label blue">Hydrodynamics</span>
+              </div>
+            </div>
+            <div class="component-body">
+              <h4>Technique &amp; Materials</h4>
+              <ul class="component-list">
+                <li>Brushwood bunds assembled from bamboo poles, mangrove brushwood, and coir or natural twine lashings.</li>
+                <li>Bund spacing: 2&ndash;3&nbsp;m; height aligned with mid-tide level.</li>
+                <li>Target porosity: 40&ndash;60% to diffuse wave energy while allowing tidal exchange.</li>
+              </ul>
+            </div>
+            <div class="component-body">
+              <h4>Engineering Function</h4>
+              <p>Bunds attenuate wave energy, create a calm sedimentation zone, and provide a scaffold for mangrove establishment.</p>
+            </div>
+            <blockquote class="component-quote">"In our university prototype, a simple friction barrier retained ~75% of sediment after simulated wave exposure &mdash; demonstrating the same hydrodynamic principle."</blockquote>
+          </article>
+
+          <article class="component-card">
+            <div class="component-head">
+              <h3>3.3 Ecological Restoration</h3>
+              <div class="component-labels">
+                <span class="component-label green">Ecology</span>
+              </div>
+            </div>
+            <div class="component-body">
+              <h4>Techniques</h4>
+              <ul class="component-list">
+                <li><strong>Propagule Broadcasting:</strong> Hand-plant Rhizophora stylosa and Avicennia marina behind bunds.</li>
+                <li><strong>Floating Vegetation Mats:</strong> Stabilise seedlings on deeper mudflats until root anchoring occurs.</li>
+              </ul>
+            </div>
+            <div class="component-body">
+              <h4>Performance Indicator</h4>
+              <p>Mangrove survival rate &ge; 80% within six months when sheltered by bunds and monitored by the Community Steering Group.</p>
+            </div>
+          </article>
+
+          <article class="component-card">
+            <div class="component-head">
+              <h3>3.4 Long-Term Sustainability</h3>
+              <div class="component-labels">
+                <span class="component-label green">Stewardship</span>
+                <span class="component-label blue">Monitoring</span>
+              </div>
+            </div>
+            <div class="component-body">
+              <h4>Method</h4>
+              <p>Community-led maintenance cycles ensure IRCS resilience. Quarterly checks record bund integrity, sediment height, and vegetation condition.</p>
+            </div>
+            <div class="component-body">
+              <h4>Tools</h4>
+              <ul class="component-list">
+                <li>Measuring sticks and sediment depth markers for transects.</li>
+                <li>Repair logs and mobile photo records shared with TSIRC.</li>
+                <li>Annual reports compiled by the Community Steering Group.</li>
+              </ul>
+            </div>
+            <div class="component-highlight">
+              <span class="component-highlight-title">Stewardship Cycle</span>
+              <p>Quarterly inspection &rarr; Repair or replant &rarr; Update data sheets &rarr; Present findings to CSG.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="annex-section prototype-section" id="prototype">
+      <div class="container">
+        <header class="section-header">
+          <h2>Prototype Documentation</h2>
+          <p class="section-lead">Laboratory testing validates sediment trapping as the IRCS&rsquo;s critical performance mechanism.</p>
+        </header>
+        <div class="prototype-grid">
+          <article class="prototype-card">
+            <h3>Purpose</h3>
+            <p>Demonstrate sediment trapping efficiency using transparent, low-cost materials to visualise the bund effect.</p>
+          </article>
+          <article class="prototype-card">
+            <h3>Materials</h3>
+            <ul class="component-list">
+              <li>Plastic bottle (halved) with gravel, sand, soil, and grass layers.</li>
+              <li>500&nbsp;mL muddy water, measuring cup, and timer.</li>
+              <li>Control setup without vegetation for comparison.</li>
+            </ul>
+          </article>
+          <article class="prototype-card">
+            <h3>Procedure</h3>
+            <ol class="prototype-steps">
+              <li>Pour muddy water at a steady rate through each model.</li>
+              <li>Measure discharge clarity and sediment left in layers.</li>
+              <li>Record time to settle and compare vegetated vs control results.</li>
+            </ol>
+          </article>
+          <article class="prototype-card">
+            <h3>Observation</h3>
+            <p>Vegetated model retained approximately 75% of sediment. Dense root zones increased friction, mirroring wetland filtration and informing bund porosity targets.</p>
+          </article>
+        </div>
+        <figure class="prototype-figure" aria-labelledby="prototype-figure-caption">
+          <figcaption id="prototype-figure-caption">Mini wetland sediment trapping model &mdash; replace placeholder with prototype photo.</figcaption>
+          <div class="component-placeholder" aria-hidden="true">Prototype image placeholder</div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="annex-section materials-section" id="materials">
+      <div class="container">
+        <header class="section-header">
+          <h2>Materials &amp; Construction Summary</h2>
+          <p class="section-lead">Summary of core components, sourcing pathways, and upkeep cycles.</p>
+        </header>
+        <div class="table-scroll" role="region" aria-label="Materials summary table">
+          <table class="annex-table">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Material</th>
+                <th scope="col">Source / Alternative</th>
+                <th scope="col">Maintenance Need</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Brushwood Bund</th>
+                <td>Bamboo poles, natural twine</td>
+                <td>Local mangrove brushwood, coconut coir binding</td>
+                <td>Replace lashings and brushwood every 3&ndash;5 years</td>
+              </tr>
+              <tr>
+                <th scope="row">Sediment</th>
+                <td>Fine sand and mud mix</td>
+                <td>Reuse from cleared tidal channels</td>
+                <td>Monitor elevation; no routine replacement</td>
+              </tr>
+              <tr>
+                <th scope="row">Mangrove Propagules</th>
+                <td>Rhizophora stylosa, Avicennia marina</td>
+                <td>Collected sustainably from Saibai stands</td>
+                <td>Replant each wet season as needed</td>
+              </tr>
+              <tr>
+                <th scope="row">Monitoring Tools</th>
+                <td>Measuring sticks, sediment gauges</td>
+                <td>Locally fabricated or reused timber</td>
+                <td>Inspect quarterly; recalibrate annually</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="annex-section data-section" id="data">
+      <div class="container">
+        <header class="section-header">
+          <h2>Prototype Data &amp; Testing Results</h2>
+          <p class="section-lead">Sediment retention results inform bund porosity selection and ecological planting density.</p>
+        </header>
+        <div class="table-scroll" role="region" aria-label="Prototype sediment retention table">
+          <table class="annex-table">
+            <thead>
+              <tr>
+                <th scope="col">Prototype Test</th>
+                <th scope="col">Sediment Retained (%)</th>
+                <th scope="col">Observation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Control (no vegetation)</th>
+                <td>22%</td>
+                <td>Rapid flow caused scour and high turbidity.</td>
+              </tr>
+              <tr>
+                <th scope="row">Vegetated (grass model)</th>
+                <td>75%</td>
+                <td>Root friction stabilized fines and clarified discharge.</td>
+              </tr>
+              <tr>
+                <th scope="row">Dense Vegetation</th>
+                <td>82%</td>
+                <td>Maximum retention with slower flow; informs future bund spacing.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption"><em>Figure 2:</em> Sediment trapping performance comparison from mini wetland trials.</p>
+      </div>
+    </section>
+
+    <section class="annex-section references-section" id="references">
+      <div class="container">
+        <header class="section-header">
+          <h2>Technical References</h2>
+          <p class="section-lead">Research underpinning the IRCS design decisions.</p>
+        </header>
+        <ol class="reference-list">
+          <li>Ruppen, R. et al. (2015). "Performance of Brushwood Fences in Shore Protection." <em>Coastal Engineering Journal</em>.</li>
+          <li>Nature-Based Solutions Initiative. (2021). "Community-led Mangrove Restoration in Thailand." University of Oxford.</li>
+          <li>UNSW Sydney &amp; University of the South Pacific. (2025). "Pacific Nature-Based Adaptation Framework."</li>
+          <li>Granville, M., &amp; Banks-Leite, C. (2023). "Mangrove Propagule Dispersal Dynamics."</li>
+          <li>van der Heide, T. et al. (2015). "Sediment Nourishment for Coastal Ecosystem Restoration."</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="annex-section downloads-section" id="downloads">
+      <div class="container">
+        <header class="section-header">
+          <h2>Supporting Files</h2>
+          <p class="section-lead">Provide downloadable supplements for clients and community partners.</p>
+        </header>
+        <div class="download-grid">
+          <a class="download-card" href="#" role="button" aria-disabled="true">
+            <span class="download-icon" aria-hidden="true">📄</span>
+            <h3>Prototype Build Guide</h3>
+            <p class="muted">PDF placeholder &mdash; assembly steps and material list.</p>
+          </a>
+          <a class="download-card" href="#" role="button" aria-disabled="true">
+            <span class="download-icon" aria-hidden="true">📊</span>
+            <h3>Data Sheets</h3>
+            <p class="muted">CSV template for sediment, tide, and mangrove monitoring.</p>
+          </a>
+          <a class="download-card" href="#" role="button" aria-disabled="true">
+            <span class="download-icon" aria-hidden="true">📘</span>
+            <h3>Reference Diagrams</h3>
+            <p class="muted">Annotated schematics for bund spacing and tidal channels.</p>
+          </a>
+          <a class="download-card" href="#" role="button" aria-disabled="true">
+            <span class="download-icon" aria-hidden="true">🖼️</span>
+            <h3>IRCS Poster</h3>
+            <p class="muted">High-level summary for workshops and community briefings.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">IRCS</div>
+        <div>
+          <p class="footer-title">IRCS Project</p>
+          <p class="footer-subtitle">Saibai Island Community</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
+        <p class="footer-client">Client: Torres Strait Regional Council · Integrated Restorative Coastal System</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRCS — Detailed Design & Proof</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+        <a class="navbar-brand" href="exec.html"><span style="color:var(--mangrove-600);margin-right:.4rem;font-weight:800">EWB Challenge - IRCS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
+            <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
+            <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+            <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
+            <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="detailed-hero" aria-labelledby="detailed-title">
+      <div class="container detailed-hero-inner">
+        <p class="detailed-kicker">Detailed Design</p>
+        <h1 id="detailed-title">Integrated Regenerative Coastal System (IRCS)</h1>
+        <p class="lead">Combining natural processes and low-tech design for sustainable coastal protection on Saibai Island.</p>
+        <figure class="hero-diagram" aria-label="Cross-section of the IRCS system showing tidal flow through bunds, sediment build-up, and mangrove growth.">
+          <figcaption>IRCS cross-section concept</figcaption>
+          <div class="hero-diagram-art" aria-hidden="true">
+            <span class="diagram-layer water">Tidal Flow</span>
+            <span class="diagram-layer bund">Brushwood Bund</span>
+            <span class="diagram-layer sediment">Sediment Build-up</span>
+            <span class="diagram-layer mangrove">Mangrove Canopy</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="design-overview" class="detailed-section design-overview">
+      <div class="container detailed-split">
+        <div class="detailed-copy">
+          <h2>How the IRCS Operates</h2>
+          <p>The IRCS is a hybrid living shoreline system built on simple engineering paired with ecological regeneration. It slows tidal energy, captures suspended sediment, and guides mangrove establishment until a living coastal barrier rebuilds itself.</p>
+          <ul class="detailed-list">
+            <li>Porous brushwood structures calm water without blocking tidal exchange.</li>
+            <li>Captured sediment raises the tidal flat, matching mangrove rooting elevations.</li>
+            <li>Community-led mangrove planting accelerates natural succession.</li>
+          </ul>
+        </div>
+        <figure class="detailed-visual" aria-labelledby="ircs-schematic">
+          <figcaption id="ircs-schematic">IRCS process schematic</figcaption>
+          <div class="mermaid" role="img" aria-label="Tidal flow leads to brushwood bunds, sediment accretion, mangrove growth, and a stabilised shoreline.">
+flowchart LR
+    A["🌊 Tidal Flow"] --> B["🪵 Brushwood Bunds"]
+    B --> C["🏝️ Sediment Accretion"]
+    C --> D["🌿 Mangrove Growth"]
+    D --> E["🛡️ Stabilised Shoreline"]
+
+    classDef blue fill:#cfe8ff,stroke:#1f4f75,stroke-width:1px,color:#12364d;
+    classDef green fill:#c9f0d9,stroke:#2d7d4a,stroke-width:1px,color:#174123;
+    class A,B blue;
+    class C,D,E green;
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="component-breakdown" class="detailed-section component-breakdown">
+      <div class="container">
+        <header class="section-header">
+          <h2>Component Breakdown</h2>
+          <p class="section-lead">Each component reinforces the next, creating a regenerative loop that the Saibai community can maintain.</p>
+        </header>
+        <div class="component-table" role="table" aria-label="IRCS component breakdown">
+          <div class="component-row component-header" role="row">
+            <div role="columnheader">Component</div>
+            <div role="columnheader">Function</div>
+            <div role="columnheader">Design Description</div>
+            <div role="columnheader">Key Considerations</div>
+          </div>
+          <div class="component-row" role="row">
+            <div role="cell"><span class="component-icon">TC</span>Tidal Channel Reopening</div>
+            <div role="cell">Restores natural water circulation</div>
+            <div role="cell">Small excavations reopen blocked tidal paths, reconnecting lagoons.</div>
+            <div role="cell">Avoid over-excavation; reuse excavated soil for nourishment.</div>
+          </div>
+          <div class="component-row" role="row">
+            <div role="cell"><span class="component-icon">SN</span>Sediment Nourishment</div>
+            <div role="cell">Builds foundations for mangroves</div>
+            <div role="cell">Spread dredged soil or channel sediment to raise the tidal flat.</div>
+            <div role="cell">Match local grain size; schedule spread during neap tides.</div>
+          </div>
+          <div class="component-row" role="row">
+            <div role="cell"><span class="component-icon">BB</span>Brushwood Bunds</div>
+            <div role="cell">Reduces wave energy, traps sediment</div>
+            <div role="cell">Bundles of brushwood lashed to bamboo stakes in parallel rows.</div>
+            <div role="cell">Target height 0.6–1.0 m, porosity ≈ 60%, align with prevailing swell.</div>
+          </div>
+          <div class="component-row" role="row">
+            <div role="cell"><span class="component-icon">MG</span>Mangrove Planting</div>
+            <div role="cell">Stabilises sediment, enhances ecology</div>
+            <div role="cell">Broadcast native propagules (Avicennia, Rhizophora) into calm zones.</div>
+            <div role="cell">Plant at densities of 1.5–2 seedlings/m²; monitor for crabs and pests.</div>
+          </div>
+          <div class="component-row" role="row">
+            <div role="cell"><span class="component-icon">CSG</span>Community-Led Maintenance</div>
+            <div role="cell">Sustains long-term function</div>
+            <div role="cell">Trained Community Steering Group inspects, repairs, and records data.</div>
+            <div role="cell">Integrate with Blue Carbon monitoring and seasonal cultural calendars.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technical-specs" class="detailed-section technical-specs">
+      <div class="container">
+        <header class="section-header">
+          <h2>Technical Specifications</h2>
+          <p class="section-lead">Dimensions and performance targets guide construction and monitoring.</p>
+        </header>
+        <div class="spec-grid">
+          <article class="spec-card">
+            <h3>🪵 Brushwood Bund Design</h3>
+            <ul>
+              <li>Structure: Cylindrical bundles 0.5–1.0 m high, 1.5–2 m wide.</li>
+              <li>Materials: Local mangrove branches, bamboo stakes, natural rope ties.</li>
+              <li>Layout: Parallel rows ±5 m apart set slightly offset to diffuse flow.</li>
+              <li>Performance: 50–70% wave energy reduction in pilot studies.</li>
+            </ul>
+          </article>
+          <article class="spec-card">
+            <h3>🏝️ Sediment Layer &amp; Elevation</h3>
+            <ul>
+              <li>Target elevation gain: 0.3–0.5 m within 24 months.</li>
+              <li>Source: Sediment recycled from tidal channel reopening works.</li>
+              <li>Deposition rate: 2–3 cm/month expected behind bunds.</li>
+              <li>Stability: Coconut fibre matting optional on exposed edges.</li>
+            </ul>
+          </article>
+          <article class="spec-card">
+            <h3>🌿 Mangrove Regeneration Zone</h3>
+            <ul>
+              <li>Planting method: Broadcast propagules; infill with nursery seedlings.</li>
+              <li>Density: 1.5–2 seedlings per m² to ensure canopy closure.</li>
+              <li>Maturity: 2–3 years to form interlocking root network.</li>
+              <li>Monitoring: Quarterly survival counts + Blue Carbon sampling.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="detailed-section prototype-detail">
+      <div class="container detailed-split">
+        <div class="detailed-copy">
+          <h2>Mini Wetland Prototype</h2>
+          <p>To validate the IRCS sediment-trapping principle, our team constructed a mini wetland sediment trapping prototype. The setup tested whether calmer water created by porous barriers increases sediment retention.</p>
+          <ul class="detailed-list">
+            <li>Dimensions: 40 × 20 × 20 cm container with gravel, sand, soil, and sponge “roots”.</li>
+            <li>Control vs Experimental: Bare soil channel compared with sponge + stick fences.</li>
+            <li>Method: Repeated pours at measured flow rates, tracking displaced sediment.</li>
+            <li>Result: ~75% sediment retention behind the bund analogue, confirming the IRCS mechanism.</li>
+          </ul>
+          <div class="callout prototype-callout">
+            <span class="callout-title">Prototype Insight</span>
+            <p>Reduced velocity zones, even at model scale, allow fine sediments to settle rapidly — mirroring expected field behaviour behind brushwood bunds.</p>
+          </div>
+        </div>
+        <figure class="prototype-figure" aria-label="Photos of the mini wetland prototype showing bund fence and sediment deposits.">
+          <figcaption>Prototype Evidence</figcaption>
+          <div class="prototype-gallery">
+            <div class="gallery-item">Device Setup</div>
+            <div class="gallery-item">Bund Fence Detail</div>
+            <div class="gallery-item">Sediment Retention</div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="validation" class="detailed-section validation-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Validation Against Design Criteria</h2>
+        </header>
+        <div class="criteria-grid">
+          <article class="criteria-card">
+            <h3>Ecological Harmony</h3>
+            <p>Restores tidal wetland processes, enables native mangrove regrowth, and enhances biodiversity through habitat complexity.</p>
+          </article>
+          <article class="criteria-card">
+            <h3>Community Empowerment</h3>
+            <p>Uses local materials, builds skills through the Community Steering Group, and aligns with cultural stewardship.</p>
+          </article>
+          <article class="criteria-card">
+            <h3>Physical Protection</h3>
+            <p>Dissipates wave energy by up to 70%, raises land elevation, and forms a living breakwater that strengthens annually.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="implementation" class="detailed-section implementation-section">
+      <div class="container detailed-split">
+        <div class="detailed-copy">
+          <h2>Implementation Feasibility</h2>
+          <p>Saibai Island can implement IRCS using locally available materials and labour, supported by carbon revenue and reduced maintenance costs.</p>
+          <ul class="detailed-list">
+            <li>Materials: Brushwood, bamboo, coconut fibre, and mangrove propagules sourced on island.</li>
+            <li>People: Community Steering Group coordinates paid local crews and training.</li>
+            <li>Financing: Blue Carbon credits and avoided seawall repairs reduce net cost.</li>
+          </ul>
+        </div>
+        <div class="timeline" aria-label="Implementation timeline">
+          <div class="timeline-step">
+            <span class="timeline-marker">Month 1–2</span>
+            <p>Site selection, channel surveys, material stockpile.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-marker">Month 3–4</span>
+            <p>Brushwood bund construction and anchoring.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-marker">Month 5</span>
+            <p>Sediment nourishment and mangrove broadcasting.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-marker">Ongoing</span>
+            <p>Monitoring, maintenance, and Blue Carbon reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="detailed-section benefits-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Environmental &amp; Social Benefits</h2>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <h3>Carbon Sequestration</h3>
+            <p>Expanding mangrove forests store blue carbon, supporting climate commitments.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Traditional Knowledge</h3>
+            <p>Reinforces Torres Strait ecological practices and cultural connection to Country.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Fisheries Recovery</h3>
+            <p>Healthy mangrove nurseries improve fish stocks and community food security.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Cultural Resilience</h3>
+            <p>Community ownership of coastal care sustains identity and livelihoods.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="limitations" class="detailed-section limitations-section">
+      <div class="container">
+        <div class="callout warning-callout">
+          <span class="callout-title">Limitations &amp; Future Testing</span>
+          <p>The prototype validates sediment trapping, yet full-scale pilots on Saibai will refine brushwood density, bund spacing, and sediment sourcing for peak performance. Continuous monitoring is required to adapt to sea-level rise, cyclones, and ecological feedback.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="detailed-section detailed-summary">
+      <div class="container summary-card">
+        <h2>Engineering that regenerates: IRCS works with nature so Saibai&rsquo;s shoreline can protect land, culture, and future generations.</h2>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">IRCS</div>
+        <div>
+          <p class="footer-title">IRCS Project</p>
+          <p class="footer-subtitle">Saibai Island Community</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
+        <p class="footer-client">Client: Torres Strait Regional Council · Integrated Restorative Coastal System</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+  <script src="script.js"></script>
+</body>
+</html>

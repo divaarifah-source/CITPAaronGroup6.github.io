@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRCS — Solution Selection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Main navigation">
+  <a class="navbar-brand" href="exec.html"><span style="color:var(--mangrove-600);margin-right:.4rem;font-weight:800">EWB Challenge - IRCS</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
+            <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
+            <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+            <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
+            <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="solution-hero">
+      <div class="container solution-hero-inner">
+        <p class="solution-kicker">A Living Shoreline for a Living Culture</p>
+        <h1>Our Solution: The Integrated Regenerative Coastal System (IRCS)</h1>
+        <p class="lead">Working with nature to protect Saibai&rsquo;s shores and restore its coastal resilience.</p>
+        <a class="btn" href="#what-is-ircs">See the System</a>
+      </div>
+    </section>
+
+    <section id="what-is-ircs" class="solution-section solution-overview">
+      <div class="container solution-split">
+        <div class="solution-copy">
+          <h2>What is IRCS?</h2>
+          <p>The Integrated Regenerative Coastal System is a hybrid, nature-based coastal defence built for Saibai Island. It pairs low-tech engineering such as brushwood bunds with ecological processes like mangrove regeneration and sediment trapping. Instead of creating a rigid wall, IRCS shapes a living shoreline that strengthens itself season after season.</p>
+          <p>As sediment settles behind the bunds and mangroves take root, wave energy drops and the shoreline rebuilds. The system grows more resilient over time because the community guides and maintains it.</p>
+        </div>
+        <figure class="solution-visual" aria-labelledby="ircs-flow-title">
+          <figcaption id="ircs-flow-title">IRCS regenerative flow</figcaption>
+          <div class="mermaid" role="img" aria-label="Tidal flow moves through brushwood bunds to trap sediment, grow mangroves, and stabilise the shoreline.">
+flowchart TB
+    A["🌊 Tidal Flow"] --> B["🪵 Brushwood Bunds"]
+    B --> C["🏝️ Sediment Trapping"]
+    C --> D["🌿 Mangrove Growth"]
+    D --> E["🛡️ Stabilised Shoreline"]
+
+    classDef blue fill:#b7e3f4,stroke:#2a577a,stroke-width:1px,color:#0b2b3a;
+    classDef green fill:#b7f4cc,stroke:#1f6e43,stroke-width:1px,color:#06351b;
+    class A,B blue;
+    class C,D,E green;
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="why-ircs" class="solution-section">
+      <div class="container">
+        <div class="why-ircs-statement challenge-statement">
+          <h2>Why IRCS?</h2>
+          <p>Saibai&rsquo;s existing seawalls offer short-term relief yet accelerate erosion, sever tidal exchange, and disconnect the community from Country. Our challenge analysis showed the shoreline losing land, livelihoods, and cultural access.</p>
+          <p>IRCS replaces brittle barriers with a restorative cycle that rebuilds land, revives mangroves, and empowers Saibai to steward its coastline. It is designed to adapt with tides, not against them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-section solution-crisis">
+      <div class="container">
+        <figure class="before-after" aria-labelledby="before-after-title">
+          <figcaption id="before-after-title">From failing defences to a regenerative shoreline</figcaption>
+          <div class="before-after-grid">
+            <div class="before collage-card">
+              <div class="collage-media" aria-hidden="true">
+                <div class="collage-item collage-main"></div>
+                <div class="collage-item collage-top"></div>
+                <div class="collage-item collage-bottom"></div>
+              </div>
+              <div class="collage-copy">
+                <h3>Before</h3>
+                <p>Cracked seawall, bare soil, eroding edge.</p>
+              </div>
+            </div>
+            <div class="after collage-card">
+              <div class="collage-media" aria-hidden="true">
+                <div class="collage-item collage-main"></div>
+                <div class="collage-item collage-top"></div>
+                <div class="collage-item collage-bottom"></div>
+              </div>
+              <div class="collage-copy">
+                <h3>After</h3>
+                <p>Brushwood bunds, calm water, mangroves returning.</p>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="initial-options" class="solution-section initial-options">
+      <div class="container">
+        <header class="section-header">
+          <h2>Initial Design Options Assessed</h2>
+          <p class="section-lead">Before progressing to IRCS we re-examined previously deployed defences to understand their limits and lessons.</p>
+        </header>
+        <div class="options-grid">
+          <article class="option-card">
+            <h3>Reinforced Seawalls</h3>
+            <p>Upgrading concrete seawalls with higher aprons promised immediate flood defence yet amplified scour at the base and diverted erosion downstream.</p>
+            <p class="option-note">Verdict: technically robust but financially intensive and culturally isolating, failing to restore tidal ecology.</p>
+          </article>
+          <article class="option-card">
+            <h3>Standalone Mangrove Replanting</h3>
+            <p>Community planting campaigns revitalised select plots, but mortality remained high where hydrodynamics still stripped fine sediments.</p>
+            <p class="option-note">Verdict: ecologically aligned yet fragile without engineered calm-water zones to shield seedlings.</p>
+          </article>
+          <article class="option-card">
+            <h3>Drainage &amp; Channel Works</h3>
+            <p>Re-cutting tidal channels improved flushing and reduced ponding, although benefits stayed localised and did not rebuild shoreline mass.</p>
+            <p class="option-note">Verdict: useful supporting measure, but insufficient as a stand-alone coastal protection strategy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-ircs-works" class="solution-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>How IRCS Works</h2>
+          <p class="section-lead">A four-phase journey that restores tidal function, shelters sediment, and grows a living mangrove shield.</p>
+        </header>
+        <div class="phase-grid">
+          <article class="phase-card">
+            <h3>Phase 1 — Foundational Preparation</h3>
+            <p><strong>Tidal channel reopening</strong> and <strong>sediment nourishment</strong> restore water exchange and raise the tidal flat, preparing stable ground for regeneration.</p>
+          </article>
+          <article class="phase-card">
+            <h3>Phase 2 — Structural Protection</h3>
+            <p><strong>Brushwood bunds</strong> are built with local labour. The porous fences calm waves so suspended sediment settles into a protected nursery zone.</p>
+          </article>
+          <article class="phase-card">
+            <h3>Phase 3 — Ecological Restoration</h3>
+            <p><strong>Mangrove propagule broadcasting</strong> and floating vegetation mats jump-start root establishment. Growing roots stitch the sediment and build a coastal forest.</p>
+          </article>
+          <article class="phase-card">
+            <h3>Phase 4 — Long-Term Sustainability</h3>
+            <p>A <strong>Community Steering Group</strong> leads monitoring, repair, and blue carbon tracking. Their stewardship keeps the system adaptive and turns regeneration into income.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="design-criteria" class="solution-section criteria-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Meeting the Design Criteria</h2>
+          <p class="section-lead">IRCS satisfies ecological harmony, community empowerment, and physical protection in one integrated system.</p>
+        </header>
+        <div class="criteria-grid">
+          <article class="criteria-card">
+            <h3>Ecological Harmony</h3>
+            <p>Restores mangroves and wetlands, boosts biodiversity, and reinforces natural sediment retention processes.</p>
+          </article>
+          <article class="criteria-card">
+            <h3>Community Empowerment</h3>
+            <p>Uses locally sourced materials, provides training, and hands daily stewardship to Saibai&rsquo;s Community Steering Group.</p>
+          </article>
+          <article class="criteria-card">
+            <h3>Physical Protection</h3>
+            <p>Dissipates wave energy, traps sediment, and prevents erosion more sustainably than rigid seawalls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="solution-section prototype-section">
+      <div class="container solution-split">
+        <div class="solution-copy">
+          <h2>IRCS in Action</h2>
+          <p>To validate IRCS&rsquo;s sediment trapping, we built a <strong>Mini Wetland Sediment Trapping System</strong> using a clear bottle model. By slowing the inflow, suspended particles settled quickly, mirroring the calm water behind brushwood bunds.</p>
+          <p>Testing showed roughly <strong>75% sediment retention</strong>, demonstrating that managed flow reduction enables the shoreline to rebuild.</p>
+          <p class="muted">Our prototype validated the core function of IRCS: slow the water, and the land returns.</p>
+        </div>
+        <figure class="prototype-visual" aria-labelledby="prototype-caption">
+          <figcaption id="prototype-caption">Prototype insights</figcaption>
+          <div class="prototype-grid">
+            <div>
+              <h3>Mini Wetland Setup</h3>
+              <p>Clear bottle layers showed sediment settling once flow slowed.</p>
+            </div>
+            <div>
+              <h3>IRCS Sediment Trap</h3>
+              <p>Brushwood bunds perform the same function at shoreline scale.</p>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="innovation" class="solution-section innovation-section">
+      <div class="container">
+        <div class="innovation-card">
+          <h2>Innovation &amp; Sustainability</h2>
+          <p>IRCS turns restoration into opportunity. Blue carbon credits reward mangrove expansion, while modular bund units allow other Torres Strait islands to adopt the system with minimal external input. By anchoring the work in community knowledge, the shoreline becomes both resilient habitat and sustainable livelihood.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-section summary-cta">
+      <div class="container summary-card">
+        <h2>By blending traditional knowledge with regenerative engineering, IRCS transforms Saibai&rsquo;s coast from erosion to resilience.</h2>
+        <a class="btn" href="detailed.html">Explore the Detailed Design</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">IRCS</div>
+        <div>
+          <p class="footer-title">IRCS Project</p>
+          <p class="footer-subtitle">Saibai Island Community</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
+        <p class="footer-client">Client: Torres Strait Regional Council · Integrated Restorative Coastal System</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+  <script src="script.js"></script>
+</body>
+</html>
