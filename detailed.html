@@ -17,13 +17,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
             <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
             <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
-            <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
+            <li class="nav-item"><a class="nav-link active" href="detailed.html" aria-current="page">Detailed Design</a></li>
             <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
             <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+            <li class="nav-item"><a class="nav-link" href="team-declarations.html">Team Declarations</a></li>
+            <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
           </ul>
         </div>
       </nav>
@@ -33,45 +35,60 @@
     <section class="detailed-hero" aria-labelledby="detailed-title">
       <div class="container detailed-hero-inner">
         <p class="detailed-kicker">Detailed Design</p>
-        <h1 id="detailed-title">Integrated Regenerative Coastal System (IRCS)</h1>
-        <p class="lead">Combining natural processes and low-tech design for sustainable coastal protection on Saibai Island.</p>
-        <figure class="hero-diagram" aria-label="Cross-section of the IRCS system showing tidal flow through bunds, sediment build-up, and mangrove growth.">
-          <figcaption>IRCS cross-section concept</figcaption>
-          <div class="hero-diagram-art" aria-hidden="true">
-            <span class="diagram-layer water">Tidal Flow</span>
-            <span class="diagram-layer bund">Brushwood Bund</span>
-            <span class="diagram-layer sediment">Sediment Build-up</span>
-            <span class="diagram-layer mangrove">Mangrove Canopy</span>
-          </div>
+        <h1 id="detailed-title">Detailed Design: Bringing the IRCS to Life</h1>
+        <p class="lead">From ecological principle to construction detail for Saibai Island.</p>
+        <div class="hero-tags" aria-label="Detailed design focus areas">
+          <span>Foundational works</span>
+          <span>Engineered bunds</span>
+          <span>Living shoreline</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="design-phases.html">See Full Design Phases</a>
+        </div>
+        <figure class="detailed-banner" aria-labelledby="detailed-banner-caption">
+          <figcaption id="detailed-banner-caption">IRCS bay module sequencing — hero placeholder awaiting final render.</figcaption>
+          <div class="detailed-banner-photo" aria-hidden="true"></div>
         </figure>
       </div>
     </section>
 
     <section id="design-overview" class="detailed-section design-overview">
-      <div class="container detailed-split">
-        <div class="detailed-copy">
-          <h2>How the IRCS Operates</h2>
-          <p>The IRCS is a hybrid living shoreline system built on simple engineering paired with ecological regeneration. It slows tidal energy, captures suspended sediment, and guides mangrove establishment until a living coastal barrier rebuilds itself.</p>
-          <ul class="detailed-list">
-            <li>Porous brushwood structures calm water without blocking tidal exchange.</li>
-            <li>Captured sediment raises the tidal flat, matching mangrove rooting elevations.</li>
-            <li>Community-led mangrove planting accelerates natural succession.</li>
-          </ul>
-        </div>
-        <figure class="detailed-visual" aria-labelledby="ircs-schematic">
-          <figcaption id="ircs-schematic">IRCS process schematic</figcaption>
-          <div class="mermaid" role="img" aria-label="Tidal flow leads to brushwood bunds, sediment accretion, mangrove growth, and a stabilised shoreline.">
-flowchart LR
-    A["🌊 Tidal Flow"] --> B["🪵 Brushwood Bunds"]
-    B --> C["🏝️ Sediment Accretion"]
-    C --> D["🌿 Mangrove Growth"]
-    D --> E["🛡️ Stabilised Shoreline"]
-
-    classDef blue fill:#cfe8ff,stroke:#1f4f75,stroke-width:1px,color:#12364d;
-    classDef green fill:#c9f0d9,stroke:#2d7d4a,stroke-width:1px,color:#174123;
-    class A,B blue;
-    class C,D,E green;
+      <div class="container design-overview-inner">
+        <div class="overview-copy">
+          <p class="section-kicker">System Snapshot</p>
+          <h2>How the IRCS Rebuilds Saibai's Shoreline</h2>
+          <p class="section-lead">The Integrated Regenerative Coastal System stitches together hydrology, gentle engineering, and community care to turn eroding seawalls into a living coastal edge. Each layer slows water, stores sediment, and hands stewardship back to Saibai crews.</p>
+          <div class="overview-cards">
+            <article class="overview-card">
+              <h3>Objective</h3>
+              <p>Restore tidal function, rebuild foreshore height, and create a resilient mangrove barrier without hard concrete walls.</p>
+            </article>
+            <article class="overview-card">
+              <h3>Techniques</h3>
+              <ul>
+                <li>Reopen tidal channels to reset natural flow.</li>
+                <li>Install brushwood bunds that calm waves and trap mud.</li>
+                <li>Seed and nurse mangroves to lock in the rebuilt shoreline.</li>
+              </ul>
+            </article>
+            <article class="overview-card">
+              <h3>Design Notes</h3>
+              <ul>
+                <li>All materials are locally sourced and hand-installed.</li>
+                <li>Modular bay layout lets the system scale along the coast.</li>
+                <li>Community monitoring feeds straight into blue-carbon reporting.</li>
+              </ul>
+            </article>
           </div>
+        </div>
+        <figure class="overview-figure" aria-labelledby="phase-flow-caption">
+          <figcaption id="phase-flow-caption">Figure 1: System overview of IRCS phases.</figcaption>
+          <ol class="phase-flow" role="list">
+            <li><strong>Foundational</strong> – Open tidal channels, grade flats, and set survey benchmarks.</li>
+            <li><strong>Structural</strong> – Drive bamboo posts and lace brushwood bundles to form calming fences.</li>
+            <li><strong>Ecological</strong> – Nourish the mudflat and plant mangrove propagules with nursery support.</li>
+            <li><strong>Sustainability</strong> – Track growth, repair fences, and certify blue-carbon outcomes.</li>
+          </ol>
         </figure>
       </div>
     </section>
@@ -80,7 +97,7 @@ flowchart LR
       <div class="container">
         <header class="section-header">
           <h2>Component Breakdown</h2>
-          <p class="section-lead">Each component reinforces the next, creating a regenerative loop that the Saibai community can maintain.</p>
+          <p class="section-lead">Each part helps the next, creating a healing loop that the Saibai community can look after.</p>
         </header>
         <div class="component-table" role="table" aria-label="IRCS component breakdown">
           <div class="component-row component-header" role="row">
@@ -91,33 +108,33 @@ flowchart LR
           </div>
           <div class="component-row" role="row">
             <div role="cell"><span class="component-icon">TC</span>Tidal Channel Reopening</div>
-            <div role="cell">Restores natural water circulation</div>
-            <div role="cell">Small excavations reopen blocked tidal paths, reconnecting lagoons.</div>
-            <div role="cell">Avoid over-excavation; reuse excavated soil for nourishment.</div>
+            <div role="cell">Brings back natural water flow</div>
+            <div role="cell">Small digs reopen blocked tidal paths, reconnecting lagoons.</div>
+            <div role="cell">Don't dig too much; reuse dug-up soil to feed other areas.</div>
           </div>
           <div class="component-row" role="row">
             <div role="cell"><span class="component-icon">SN</span>Sediment Nourishment</div>
             <div role="cell">Builds foundations for mangroves</div>
-            <div role="cell">Spread dredged soil or channel sediment to raise the tidal flat.</div>
-            <div role="cell">Match local grain size; schedule spread during neap tides.</div>
+            <div role="cell">Spread dirt from channels to lift the tidal flat.</div>
+            <div role="cell">Match local mud type; spread during low tides.</div>
           </div>
           <div class="component-row" role="row">
             <div role="cell"><span class="component-icon">BB</span>Brushwood Bunds</div>
-            <div role="cell">Reduces wave energy, traps sediment</div>
-            <div role="cell">Bundles of brushwood lashed to bamboo stakes in parallel rows.</div>
-            <div role="cell">Target height 0.6–1.0 m, porosity ≈ 60%, align with prevailing swell.</div>
+            <div role="cell">Slows waves, traps mud</div>
+            <div role="cell">Bundles of sticks tied to bamboo posts in rows.</div>
+            <div role="cell">Target height 0.6–1.0 m, about 60% holes, line up with wave direction.</div>
           </div>
           <div class="component-row" role="row">
             <div role="cell"><span class="component-icon">MG</span>Mangrove Planting</div>
-            <div role="cell">Stabilises sediment, enhances ecology</div>
-            <div role="cell">Broadcast native propagules (Avicennia, Rhizophora) into calm zones.</div>
-            <div role="cell">Plant at densities of 1.5–2 seedlings/m²; monitor for crabs and pests.</div>
+            <div role="cell">Locks in mud, helps nature</div>
+            <div role="cell">Spread native mangrove seeds into calm zones.</div>
+            <div role="cell">Plant 1.5–2 seedlings per square meter; watch for crabs and bugs.</div>
           </div>
           <div class="component-row" role="row">
             <div role="cell"><span class="component-icon">CSG</span>Community-Led Maintenance</div>
-            <div role="cell">Sustains long-term function</div>
-            <div role="cell">Trained Community Steering Group inspects, repairs, and records data.</div>
-            <div role="cell">Integrate with Blue Carbon monitoring and seasonal cultural calendars.</div>
+            <div role="cell">Keeps it working long-term</div>
+            <div role="cell">Trained Community Steering Group checks, fixes, and writes down data.</div>
+            <div role="cell">Link with Blue Carbon tracking and seasonal cultural calendars.</div>
           </div>
         </div>
       </div>
@@ -127,34 +144,34 @@ flowchart LR
       <div class="container">
         <header class="section-header">
           <h2>Technical Specifications</h2>
-          <p class="section-lead">Dimensions and performance targets guide construction and monitoring.</p>
+          <p class="section-lead">Sizes and goals guide building and checking.</p>
         </header>
         <div class="spec-grid">
           <article class="spec-card">
             <h3>🪵 Brushwood Bund Design</h3>
             <ul>
-              <li>Structure: Cylindrical bundles 0.5–1.0 m high, 1.5–2 m wide.</li>
-              <li>Materials: Local mangrove branches, bamboo stakes, natural rope ties.</li>
-              <li>Layout: Parallel rows ±5 m apart set slightly offset to diffuse flow.</li>
-              <li>Performance: 50–70% wave energy reduction in pilot studies.</li>
+              <li>Structure: Round bundles 0.5–1.0 m high, 1.5–2 m wide.</li>
+              <li>Materials: Local mangrove branches, bamboo posts, natural rope.</li>
+              <li>Layout: Rows about 5 m apart, slightly staggered to spread flow.</li>
+              <li>Performance: Cuts wave power by 50–70% in tests.</li>
             </ul>
           </article>
           <article class="spec-card">
             <h3>🏝️ Sediment Layer &amp; Elevation</h3>
             <ul>
-              <li>Target elevation gain: 0.3–0.5 m within 24 months.</li>
-              <li>Source: Sediment recycled from tidal channel reopening works.</li>
-              <li>Deposition rate: 2–3 cm/month expected behind bunds.</li>
-              <li>Stability: Coconut fibre matting optional on exposed edges.</li>
+              <li>Target height gain: 0.3–0.5 m within 24 months.</li>
+              <li>Source: Mud recycled from opening tidal channels.</li>
+              <li>Build-up rate: 2–3 cm per month expected behind fences.</li>
+              <li>Stability: Coconut mats optional on bare edges.</li>
             </ul>
           </article>
           <article class="spec-card">
             <h3>🌿 Mangrove Regeneration Zone</h3>
             <ul>
-              <li>Planting method: Broadcast propagules; infill with nursery seedlings.</li>
-              <li>Density: 1.5–2 seedlings per m² to ensure canopy closure.</li>
-              <li>Maturity: 2–3 years to form interlocking root network.</li>
-              <li>Monitoring: Quarterly survival counts + Blue Carbon sampling.</li>
+              <li>Planting method: Spread seeds; add nursery seedlings where needed.</li>
+              <li>Density: 1.5–2 seedlings per square meter to cover fully.</li>
+              <li>Maturity: 2–3 years to form locked root network.</li>
+              <li>Monitoring: Count survivors every 3 months + Blue Carbon checks.</li>
             </ul>
           </article>
         </div>
@@ -196,15 +213,15 @@ flowchart LR
         <div class="criteria-grid">
           <article class="criteria-card">
             <h3>Ecological Harmony</h3>
-            <p>Restores tidal wetland processes, enables native mangrove regrowth, and enhances biodiversity through habitat complexity.</p>
+            <p>Brings back tidal wetland flow, helps native mangroves grow again, and boosts wildlife by creating habitat.</p>
           </article>
           <article class="criteria-card">
             <h3>Community Empowerment</h3>
-            <p>Uses local materials, builds skills through the Community Steering Group, and aligns with cultural stewardship.</p>
+            <p>Uses local materials, builds skills through the Community Steering Group, and fits with cultural care of Country.</p>
           </article>
           <article class="criteria-card">
             <h3>Physical Protection</h3>
-            <p>Dissipates wave energy by up to 70%, raises land elevation, and forms a living breakwater that strengthens annually.</p>
+            <p>Cuts wave power by up to 70%, lifts land level, and creates a living wall that gets stronger every year.</p>
           </article>
         </div>
       </div>
@@ -214,29 +231,29 @@ flowchart LR
       <div class="container detailed-split">
         <div class="detailed-copy">
           <h2>Implementation Feasibility</h2>
-          <p>Saibai Island can implement IRCS using locally available materials and labour, supported by carbon revenue and reduced maintenance costs.</p>
+          <p>Saibai Island can build IRCS using local materials and workers, paid for by carbon money and lower repair costs.</p>
           <ul class="detailed-list">
-            <li>Materials: Brushwood, bamboo, coconut fibre, and mangrove propagules sourced on island.</li>
-            <li>People: Community Steering Group coordinates paid local crews and training.</li>
-            <li>Financing: Blue Carbon credits and avoided seawall repairs reduce net cost.</li>
+            <li>Materials: Sticks, bamboo, coconut fiber, and mangrove seeds found on island.</li>
+            <li>People: Community Steering Group runs paid local crews and training.</li>
+            <li>Financing: Blue Carbon credits and money saved from not fixing concrete walls lower the cost.</li>
           </ul>
         </div>
         <div class="timeline" aria-label="Implementation timeline">
           <div class="timeline-step">
             <span class="timeline-marker">Month 1–2</span>
-            <p>Site selection, channel surveys, material stockpile.</p>
+            <p>Pick site, check channels, gather materials.</p>
           </div>
           <div class="timeline-step">
             <span class="timeline-marker">Month 3–4</span>
-            <p>Brushwood bund construction and anchoring.</p>
+            <p>Build and anchor stick fences.</p>
           </div>
           <div class="timeline-step">
             <span class="timeline-marker">Month 5</span>
-            <p>Sediment nourishment and mangrove broadcasting.</p>
+            <p>Spread mud and plant mangrove seeds.</p>
           </div>
           <div class="timeline-step">
             <span class="timeline-marker">Ongoing</span>
-            <p>Monitoring, maintenance, and Blue Carbon reporting.</p>
+            <p>Check, fix, and report Blue Carbon data.</p>
           </div>
         </div>
       </div>
@@ -250,19 +267,19 @@ flowchart LR
         <div class="benefit-grid">
           <article class="benefit-card">
             <h3>Carbon Sequestration</h3>
-            <p>Expanding mangrove forests store blue carbon, supporting climate commitments.</p>
+            <p>Growing mangrove forests store blue carbon, helping fight climate change.</p>
           </article>
           <article class="benefit-card">
             <h3>Traditional Knowledge</h3>
-            <p>Reinforces Torres Strait ecological practices and cultural connection to Country.</p>
+            <p>Strengthens Torres Strait nature practices and cultural ties to Country.</p>
           </article>
           <article class="benefit-card">
             <h3>Fisheries Recovery</h3>
-            <p>Healthy mangrove nurseries improve fish stocks and community food security.</p>
+            <p>Healthy mangrove nurseries bring more fish and better food security.</p>
           </article>
           <article class="benefit-card">
             <h3>Cultural Resilience</h3>
-            <p>Community ownership of coastal care sustains identity and livelihoods.</p>
+            <p>Community ownership of coast care keeps identity and jobs strong.</p>
           </article>
         </div>
       </div>
@@ -272,14 +289,14 @@ flowchart LR
       <div class="container">
         <div class="callout warning-callout">
           <span class="callout-title">Limitations &amp; Future Testing</span>
-          <p>The prototype validates sediment trapping, yet full-scale pilots on Saibai will refine brushwood density, bund spacing, and sediment sourcing for peak performance. Continuous monitoring is required to adapt to sea-level rise, cyclones, and ecological feedback.</p>
+          <p>The test proves mud trapping works, but real pilots on Saibai will fine-tune stick density, fence spacing, and where to get mud for best results. Ongoing checks are needed to adapt to rising seas, cyclones, and nature's changes.</p>
         </div>
       </div>
     </section>
 
     <section class="detailed-section detailed-summary">
       <div class="container summary-card">
-        <h2>Engineering that regenerates: IRCS works with nature so Saibai&rsquo;s shoreline can protect land, culture, and future generations.</h2>
+        <h2>Building that heals: IRCS works with nature so Saibai's shoreline can protect land, culture, and future generations.</h2>
       </div>
     </section>
   </main>
@@ -291,6 +308,9 @@ flowchart LR
           <p class="footer-title">IRCS Project</p>
           <p class="footer-subtitle">Saibai Island Community</p>
         </div>
+      </div>
+      <div class="footer-cta">
+        <a class="footer-cta-link" href="references.html">View References Library</a>
       </div>
       <div class="footer-meta">
         <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
