@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IRCS — The Challenge: Saibai Island</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -16,13 +17,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
-            <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
+            <li class="nav-item"><a class="nav-link active" href="challenge.html" aria-current="page">Challenge</a></li>
             <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
             <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
             <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
             <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+            <li class="nav-item"><a class="nav-link" href="team-declarations.html">Team Declarations</a></li>
+            <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
           </ul>
         </div>
       </nav>
@@ -31,134 +34,170 @@
 
   <main>
     <section class="challenge-hero" aria-labelledby="challenge-title">
-      <div class="container">
-        <div class="challenge-title-group">
-          <p class="challenge-kicker">The Challenge</p>
-          <h1 id="challenge-title">Saibai Island and the Erosion Crisis</h1>
+      <div class="container challenge-hero-inner">
+        <p class="hero-kicker">Saibai Island · Climate Emergency</p>
+        <h1 id="challenge-title">The Challenge: Protecting Saibai Island's Future</h1>
+  <p class="lead">Rising seas erode Saibai's foreshore and demand a response built on Country.</p>
+        <div class="hero-tags" aria-label="Key climate pressures">
+          <span>Sea-Level Rise</span>
+          <span>Intensified Storm Surges</span>
+          <span>Climate-Driven Mangrove Decline</span>
         </div>
-        <p class="hero-subtitle">Understanding the environmental, social, and cultural impacts driving our design response.</p>
-        <blockquote class="challenge-quote">“When the sea rises, it’s not just the land that disappears — it’s our story.”</blockquote>
-        <a class="btn" href="#opportunity">See Our Solution &rarr;</a>
+        <figure class="challenge-banner" aria-labelledby="challenge-banner-caption">
+          <figcaption id="challenge-banner-caption">Saibai foreshore under repeated tidal stress — banner placeholder awaiting final imagery.</figcaption>
+          <div class="challenge-banner-photo" aria-hidden="true"></div>
+        </figure>
+        <div class="hero-actions">
+          <a class="btn primary" href="#context">Understand the Threat</a>
+          <a class="btn-secondary" href="solution.html">Explore the Solution &rarr;</a>
+        </div>
       </div>
     </section>
 
-    <section class="challenge-section container" aria-labelledby="background-heading">
-      <div class="section-header">
-        <h2 id="background-heading">Why Saibai Is at Risk</h2>
-        <p class="section-lead">Saibai Island sits within the Torres Strait, a low-lying mud island only kilometres from Papua New Guinea. Climate shifts are reshaping its coastline and livelihood.</p>
-      </div>
-      <div class="challenge-context">
-        <p>Saibai’s foundations are layers of mangrove sediment, resting barely above sea level. Intensifying king tides, storm surges, and sea-level rise now inundate homes several times a year. Saltwater intrusion contaminates precious freshwater lenses, while chronic flooding accelerates shoreline loss and threatens food production and infrastructure.</p>
-        <p>These pressures compound on a community whose cultural identity is inseparable from Country. Elders describe how burial grounds and culturally significant trees are being swept away, eroding stories that have anchored Saibai life for generations.</p>
-        <figure class="challenge-map media placeholder" role="img" aria-label="Map of the Torres Strait highlighting Saibai Island">
-          <figcaption>Torres Strait context — Saibai Island highlighted. (Map placeholder)</figcaption>
+    <section id="context" class="challenge-section challenge-context-section" aria-labelledby="context-heading">
+      <div class="container challenge-context-grid">
+        <header class="section-header">
+          <p class="section-kicker">The Context</p>
+          <h2 id="context-heading">Saibai Island &amp; Climate Impact</h2>
+          <p class="section-lead">Saibai sits on porous mangrove peat only centimetres above the tides.</p>
+        </header>
+        <div class="challenge-context-body">
+          <p>Rising seas now breach the foreshore several times each wet season. Saltwater seeps through peat soils and taints gardens and freshwater wells.</p>
+          <p>Storm tides rip at boat ramps, evacuation routes, and shared spaces. Cultural grounds shrink with every surge that steals more sand.</p>
+          <div class="context-fact-list" role="list" aria-label="Key climate context for Saibai Island">
+            <div class="context-fact" role="listitem">
+              <span class="context-fact-label">Elevation</span>
+              <p class="context-fact-body">Most of the island sits under <strong>1 m</strong> above mean sea level.</p>
+            </div>
+            <div class="context-fact" role="listitem">
+              <span class="context-fact-label">Storm tides</span>
+              <p class="context-fact-body">King tides and monsoon surges now flood homes and roads multiple times each year.</p>
+            </div>
+            <div class="context-fact" role="listitem">
+              <span class="context-fact-label">Coastal change</span>
+              <p class="context-fact-body">Mangrove dieback and channel erosion accelerate shoreline retreat across priority zones.</p>
+            </div>
+          </div>
+        </div>
+        <figure class="challenge-map" aria-labelledby="map-caption">
+          <div class="map-frame" role="presentation"></div>
+          <figcaption id="map-caption">Saibai Island within the Torres Strait, just south of Papua New Guinea. (Map placeholder)</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="challenge-section challenge-section-alt" aria-labelledby="crisis-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="crisis-heading">What the Crisis Looks Like</h2>
-          <p class="section-lead">Environmental systems, cultural heritage, and economic stability are bound together — each now under strain.</p>
+    <section class="challenge-section challenge-breakdown" aria-labelledby="breakdown-heading">
+      <div class="container challenge-breakdown-inner">
+        <header class="section-header">
+          <p class="section-kicker">Core Challenges</p>
+          <h2 id="breakdown-heading">Pressures that threaten Saibai today</h2>
+          <p class="section-lead">Each challenge links climate drivers with local conditions and needs a tailored, culturally led answer.</p>
+        </header>
+        <div class="challenge-list">
+          <article class="challenge-detail" aria-labelledby="challenge-foreshore">
+            <h3 id="challenge-foreshore">Challenge 1 · Foreshore Undercutting</h3>
+            <p class="challenge-intro">Wave energy scours the low shoreline and pushes saltwater beneath homes.</p>
+            <h4>The Cause</h4>
+            <p>Extended monsoon seasons stack wind, tide, and swell onto the village edge.</p>
+            <h4>The Impact</h4>
+            <p>Homes, evacuation tracks, and cultural grounds flood several times each wet season.</p>
+            <h4>Our Response</h4>
+            <p>Stick fences and sediment cells rebuild berms, shield access routes, and slow wave force.</p>
+          </article>
+          <article class="challenge-detail" aria-labelledby="challenge-mangrove">
+            <h3 id="challenge-mangrove">Challenge 2 · Mangrove Decline</h3>
+            <p class="challenge-intro">Dying mangroves remove the living buffer that once trapped sand and stories.</p>
+            <h4>The Cause</h4>
+            <p>Sea-level rise drowns root systems while hotter waters stress juvenile growth.</p>
+            <h4>The Impact</h4>
+            <p>Shoreline retreat accelerates, exposing burial grounds and food gardens to salt.</p>
+            <h4>Our Response</h4>
+            <p>Guided planting and sediment lagoons create nurseries that keep Country anchored.</p>
+          </article>
+          <article class="challenge-detail" aria-labelledby="challenge-infra">
+            <h3 id="challenge-infra">Challenge 3 · Infrastructure Disruption</h3>
+            <p class="challenge-intro">Critical assets face repeat damage that drains budgets and energy.</p>
+            <h4>The Cause</h4>
+            <p>Ad-hoc seawalls shift erosion, and supply delays leave assets without cover.</p>
+            <h4>The Impact</h4>
+            <p>Emergency funds replace forward planning while roads and wells cycle through repairs.</p>
+            <h4>Our Response</h4>
+            <p>Modular IRCS units use local materials, shorten repair windows, and build village skills.</p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="challenge-section challenge-gap challenge-section-alt" aria-labelledby="gap-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-kicker">Response Gap</p>
+          <h2 id="gap-heading">Why current approaches fall short</h2>
+          <p class="section-lead">Past works stay rigid, cost heavy, and overlook Saibai's living coastline.</p>
+        </header>
         <div class="challenge-grid">
           <article class="challenge-card">
-            <h3>Environmental Impact</h3>
-            <p>The protective mangrove fringe has been dying back as saltwater inundation and sediment imbalance choke roots. Without this buffer, waves strip away banks, exposing homes, roads, and freshwater springs.</p>
+            <h3>Rigid seawalls</h3>
+            <p>Concrete barriers get undercut, shift erosion, and demand repeat multi-million dollar rebuilds.</p>
           </article>
           <article class="challenge-card">
-            <h3>Cultural &amp; Human Impact</h3>
-            <p>Country holds ancestral burial grounds, totemic trees, and community gathering spaces. Rapid erosion undermines these places and raises the spectre of forced relocation — a lived reality for previous generations.</p>
+            <h3>Imported fill</h3>
+            <p>Barge-delivered rock washes away fast and depends on costly, weather-prone freight.</p>
           </article>
           <article class="challenge-card">
-            <h3>Economic Challenge</h3>
-            <p>Hard-engineered seawalls deliver short respite but fail under extreme events, demanding costly repairs. Millions have been spent on emergency works that do little to rebuild natural resilience.</p>
+            <h3>Fragmented projects</h3>
+            <p>One-off works skip monitoring and ignore the cultural stewardship that keeps projects alive.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="challenge-section container" aria-labelledby="problem-heading">
-      <div class="challenge-statement">
-        <h2 id="problem-heading">Problem Statement</h2>
-        <p>How can a culturally sensitive and economically viable coastal protection system be developed to mitigate climate-change-driven erosion and safeguard the physical and cultural survival of the Saibai community, without relying on traditional, high-impact infrastructure?</p>
-      </div>
-    </section>
-
-    <section class="challenge-section container" aria-labelledby="need-heading">
-      <div class="challenge-need">
-        <div>
-          <h2 id="need-heading">User Need</h2>
-          <p>The Saibai community needs to implement a resilient and sustainable coastal defense system because climate-change-driven erosion is threatening their ancestral homelands, compromising their limited freshwater supplies, and risking forced displacement from their traditional way of life.</p>
-        </div>
-        <figure class="need-media media placeholder" role="img" aria-label="Portrait of Saibai community members">
-          <figcaption>Community stewardship remains central. (Photo placeholder)</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="challenge-section challenge-section-alt" aria-labelledby="approach-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="approach-heading">What Has Been Tried — And Why It Falls Short</h2>
-        </div>
-        <div class="challenge-approaches">
-          <article>
-            <h3>Concrete Seawalls (2015–2021)</h3>
-            <p>Provided short-term flood defence, yet repeated undercutting and cyclone damage demand ongoing capital works. The rigid walls also reflect wave energy, worsening erosion nearby.</p>
-          </article>
-          <article>
-            <h3>Mangrove Replanting Campaigns</h3>
-            <p>Community-led plantings achieved patches of regrowth, but high mortality persists where sediments are not replenished. Without hydrodynamic support structures, young mangroves cannot establish.</p>
-          </article>
-          <article>
-            <h3>Drainage and Channel Works</h3>
-            <p>Improved tidal flushing in targeted zones yet failed to address sediment starvation. Works remain disconnected from broader coastal processes and cultural governance needs.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="opportunity" class="challenge-section container" aria-labelledby="opportunity-heading">
-      <div class="challenge-opportunity">
-        <h2 id="opportunity-heading">A Chance to Regenerate</h2>
-        <p>The Integrated Regenerative Coastal System (IRCS) reframes protection as partnership with nature. By combining brushwood structures, sediment nurseries, and guided mangrove regeneration, the system rebuilds natural barriers while respecting cultural stewardship.</p>
-        <p>Instead of importing heavy infrastructure, IRCS elevates local knowledge and low-tech maintenance so Saibai can restore its own shorelines and livelihoods.</p>
-        <a class="btn" href="solution.html">Explore the IRCS Solution &rarr;</a>
       </div>
     </section>
 
     <section class="challenge-section challenge-infographic" aria-labelledby="infographic-heading">
       <div class="container">
         <div class="section-header">
-          <h2 id="infographic-heading">Key Pressures at a Glance</h2>
+          <p class="section-kicker">Pressure Points</p>
+          <h2 id="infographic-heading">Key forces reshaping Saibai's coast</h2>
         </div>
         <div class="infographic-grid">
           <div class="infographic-item">
-            <h3>Issue</h3>
+            <h3>Process</h3>
             <p class="muted">Mangrove loss</p>
-            <h4>Current Impact</h4>
-            <p>Reduced natural wave buffering and exposed shorelines.</p>
-            <h4>Future Risk</h4>
-            <p>Accelerated retreat and freshwater salinisation.</p>
+            <h4>Current impact</h4>
+            <p>Protective roots thin out, removing the natural brake that once slowed waves.</p>
+            <h4>Future risk</h4>
+            <p>Retreat speeds up and salt reaches family gardens and shallow freshwater wells.</p>
           </div>
           <div class="infographic-item">
-            <h3>Issue</h3>
+            <h3>Process</h3>
             <p class="muted">Erosion &amp; flooding</p>
-            <h4>Current Impact</h4>
-            <p>Up to one metre of shoreline loss annually in hotspots.</p>
-            <h4>Future Risk</h4>
-            <p>Chronic inundation of homes, roads, and cultural sites.</p>
+            <h4>Current impact</h4>
+            <p>Priority foreshore zones lose nearly a metre a year, exposing homes, roads, and the airstrip.</p>
+            <h4>Future risk</h4>
+            <p>Chronic inundation cuts services and forces staged relocation away from Country.</p>
           </div>
           <div class="infographic-item">
-            <h3>Issue</h3>
+            <h3>Process</h3>
             <p class="muted">Cultural displacement</p>
-            <h4>Current Impact</h4>
-            <p>Community resilience stretched by recurring emergency works.</p>
-            <h4>Future Risk</h4>
-            <p>Forced relocation by 2050 if trajectories continue unchecked.</p>
+            <h4>Current impact</h4>
+            <p>Community time shifts to emergency clean-ups instead of cultural programs and youth training.</p>
+            <h4>Future risk</h4>
+            <p>Families consider mainland moves, risking the loss of intergenerational knowledge on Saibai.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opportunity" class="challenge-section challenge-forward" aria-labelledby="opportunity-heading">
+      <div class="container challenge-forward-inner">
+        <div class="challenge-forward-copy">
+          <p class="section-kicker">Our Opportunity</p>
+          <h2 id="opportunity-heading">See how IRCS restores balance between land, water, and community</h2>
+          <p>The Integrated Regenerative Coastal System pairs nature-based structures with Saibai-led care. Stick fences and sediment gardens rebuild the foreshore under community guidance.</p>
+          <p>Modular units use local materials, keep people on Country, and open pathways for jobs and training.</p>
+        </div>
+        <div class="challenge-forward-actions">
+          <a class="btn primary" href="solution.html">Explore the Solution &rarr;</a>
+          <a class="btn-secondary" href="detailed.html">Dive into the Design</a>
         </div>
       </div>
     </section>
@@ -172,6 +211,9 @@
           <p class="footer-title">IRCS Project</p>
           <p class="footer-subtitle">Saibai Island Community</p>
         </div>
+      </div>
+      <div class="footer-cta">
+        <a class="footer-cta-link" href="references.html">View References Library</a>
       </div>
       <div class="footer-meta">
         <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
