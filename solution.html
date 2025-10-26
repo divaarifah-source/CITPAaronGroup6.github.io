@@ -154,23 +154,71 @@
     <section id="what-is-ircs" class="solution-section solution-overview">
       <div class="container solution-split">
         <div class="solution-copy">
-          <h2>What is IRCS?</h2>
-          <p>IRCS is a nature-based coastal defence designed for Saibai. It relies on brushwood bunds, sediment pockets, and guided mangrove care instead of concrete walls.</p>
-          <p>When tides slow behind the fences, mud settles and fresh roots anchor the foreshore. Community crews tend each cell so the shoreline strengthens every season.</p>
+          <h2>IRCS at a glance</h2>
+          <p>The Integrated Regenerative Coastal System is a modular shoreline toolkit built for Saibai’s tides and community leadership.</p>
+          <div class="ircs-glance-grid" role="list">
+            <article class="ircs-glance-card" role="listitem">
+              <span class="glance-metric">1.8&nbsp;km</span>
+              <h3>Pilot foreshore coverage</h3>
+              <p>Mapped cells stabilise the highest-risk seawall edge in three build seasons.</p>
+            </article>
+            <article class="ircs-glance-card" role="listitem">
+              <span class="glance-metric">18&nbsp;tonnes</span>
+              <h3>Sediment held each spring tide</h3>
+              <p>Bund baffling and sediment gardens lift the tidal flat without imported fill.</p>
+            </article>
+            <article class="ircs-glance-card" role="listitem">
+              <span class="glance-metric">24</span>
+              <h3>Community crew roles</h3>
+              <p>Stewardship pathways keep planning, maintenance, and blue-carbon reporting on Saibai.</p>
+            </article>
+          </div>
+          <p class="glance-note">Together the metrics show a living system that scales—stronger land, verified carbon, and jobs rooted in Country.</p>
         </div>
         <figure class="solution-visual" aria-labelledby="ircs-flow-title">
           <figcaption id="ircs-flow-title">IRCS regenerative flow</figcaption>
-          <div class="mermaid" role="img" aria-label="Tidal flow moves through brushwood bunds to trap sediment, grow mangroves, and stabilise the shoreline.">
-flowchart TB
-    A["🌊 Tidal Flow"] --> B["🪵 Brushwood Bunds"]
-    B --> C["🏝️ Sediment Trapping"]
-    C --> D["🌿 Mangrove Growth"]
-    D --> E["🛡️ Stabilised Shoreline"]
-
-    classDef blue fill:#b7e3f4,stroke:#2a577a,stroke-width:1px,color:#0b2b3a;
-    classDef green fill:#b7f4cc,stroke:#1f6e43,stroke-width:1px,color:#06351b;
-    class A,B blue;
-    class C,D,E green;
+          <div class="ircs-flow-card" role="group" aria-label="Five-step journey that slows tides, catches sediment, grows mangroves, and locks in a living coastline.">
+            <div class="ircs-flow-intro">
+              <span class="flow-pill">5 step loop</span>
+              <p>Energy in, energy out — every stage feeds the next until Saibai's edge holds firm again.</p>
+            </div>
+            <ol class="ircs-flow-list">
+              <li>
+                <span class="flow-step-icon" aria-hidden="true">🌊</span>
+                <div class="flow-step-copy">
+                  <h3>Tidal Flow</h3>
+                  <p>Reopened channels guide gentle tides into the regeneration cells instead of over the seawall.</p>
+                </div>
+              </li>
+              <li>
+                <span class="flow-step-icon" aria-hidden="true">🪵</span>
+                <div class="flow-step-copy">
+                  <h3>Brushwood Bunds</h3>
+                  <p>Low stick fences baffle wave energy, slowing the water enough for suspended mud to drop.</p>
+                </div>
+              </li>
+              <li>
+                <span class="flow-step-icon" aria-hidden="true">🏝️</span>
+                <div class="flow-step-copy">
+                  <h3>Sediment Trapping</h3>
+                  <p>Calm pockets hold fine sediments, quietly lifting ground levels behind the seawall.</p>
+                </div>
+              </li>
+              <li>
+                <span class="flow-step-icon" aria-hidden="true">🌿</span>
+                <div class="flow-step-copy">
+                  <h3>Mangrove Growth</h3>
+                  <p>Propagules and nursery stock root into the new mud, weaving a living barrier.</p>
+                </div>
+              </li>
+              <li>
+                <span class="flow-step-icon" aria-hidden="true">🛡️</span>
+                <div class="flow-step-copy">
+                  <h3>Stabilised Shoreline</h3>
+                  <p>Community crews maintain the loop, locking in habitat, jobs, and climate resilience.</p>
+                </div>
+              </li>
+            </ol>
           </div>
         </figure>
       </div>
@@ -383,8 +431,6 @@ flowchart TB
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
   <script src="script.js"></script>
 </body>
 </html>
