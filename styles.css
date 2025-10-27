@@ -418,6 +418,25 @@ p {
   font-weight: 600;
 }
 
+/* Scoped button appearance for AI log cards (high contrast on white cards) */
+.ai-log-card .btn-secondary {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ocean-900);
+  border: 1px solid rgba(1,42,70,0.08);
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(1,42,70,0.06);
+}
+
+.ai-log-card .btn-secondary:hover,
+.ai-log-card .btn-secondary:focus {
+  background: linear-gradient(180deg, rgba(245,247,250,1), rgba(235,242,249,1));
+  color: var(--ocean-900);
+  border-color: rgba(1,42,70,0.14);
+}
+
 .ai-log-card-header time {
   font-weight: 700;
   color: var(--ocean-900);
@@ -1454,6 +1473,9 @@ p {
   border-color: rgba(1,42,70,0.18);
   color: var(--ocean-900);
   background: rgba(255,255,255,0.8);
+  /* match primary button weight and padding so both CTAs align visually */
+  padding: 0.9rem 2.4rem;
+  font-weight: 600;
 }
 
 .challenge-forward-actions .btn-secondary:hover,
@@ -1664,6 +1686,242 @@ p {
 
 .solution-section {
   padding: 4rem 0;
+}
+
+.decision-matrix-section {
+  background: linear-gradient(135deg, rgba(1,42,70,0.12), rgba(47,143,84,0.2));
+}
+
+.decision-matrix-container {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.decision-matrix-header .section-lead {
+  max-width: 64ch;
+}
+
+.decision-matrix-card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 26px;
+  padding: clamp(1.8rem, 5vw, 2.6rem);
+  border: 1px solid rgba(1,42,70,0.2);
+  box-shadow: 0 24px 52px rgba(1,42,70,0.18);
+  display: grid;
+  gap: 1.6rem;
+}
+
+.matrix-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 18px;
+}
+
+.matrix-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.matrix-scroll::-webkit-scrollbar-thumb {
+  background: rgba(1,42,70,0.2);
+  border-radius: 999px;
+}
+
+.decision-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  font-size: 0.95rem;
+}
+
+.decision-matrix-table thead th {
+  background: linear-gradient(120deg, #045a8d, #2f8f54);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.decision-matrix-table thead th:first-child {
+  border-top-left-radius: 18px;
+}
+
+.decision-matrix-table thead th:last-child {
+  border-top-right-radius: 18px;
+}
+
+.decision-matrix-table tbody th {
+  font-weight: 600;
+  color: var(--ocean-900);
+  background: rgba(1,42,70,0.02);
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.decision-matrix-table td {
+  padding: 0.8rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(1,42,70,0.08);
+  color: var(--charcoal);
+}
+
+.decision-matrix-table tbody tr:nth-child(even) td {
+  background: rgba(4,90,141,0.08);
+}
+
+.decision-matrix-table tbody tr:nth-child(even) th {
+  background: rgba(4,90,141,0.09);
+}
+
+.matrix-highlight {
+  background: rgba(47,143,84,0.28);
+  font-weight: 600;
+  color: var(--ocean-900);
+  box-shadow: inset 0 0 0 1px rgba(47,143,84,0.22);
+}
+
+.matrix-total th,
+.matrix-total td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: none;
+}
+
+.matrix-total th {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.matrix-score {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ocean-900);
+}
+
+.matrix-rank {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--ocean-700);
+}
+
+.matrix-top {
+  background: linear-gradient(140deg, #2f8f54, #7ed6aa);
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(1,42,70,0.18);
+}
+
+.matrix-top .matrix-score,
+.matrix-top .matrix-rank {
+  color: var(--white);
+}
+
+.matrix-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  background: rgba(47,143,84,0.2);
+  border-radius: 16px;
+  padding: 0.9rem 1.1rem;
+  color: var(--ocean-900);
+  border: 1px solid rgba(47,143,84,0.35);
+}
+
+.top-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #2f8f54;
+  color: var(--white);
+}
+
+.matrix-note p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ocean-900);
+}
+
+.fun-fact-section {
+  padding-top: 0;
+  background: linear-gradient(120deg, rgba(4,90,141,0.05), rgba(47,143,84,0.08));
+}
+
+.fun-fact-card {
+  display: grid;
+  gap: 1.2rem;
+  background: rgba(255,255,255,0.95);
+  border-left: 6px solid var(--ocean-700);
+  border-radius: 20px;
+  padding: clamp(1.8rem, 5vw, 2.4rem);
+  box-shadow: 0 20px 44px rgba(1,42,70,0.14);
+}
+
+.fun-fact-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.fun-fact-content h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--ocean-900);
+}
+
+.fun-fact-content p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--charcoal);
+}
+
+.fun-fact-caption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ocean-700);
+}
+
+@media (max-width: 900px) {
+  .decision-matrix-table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 720px) {
+  .decision-matrix-table {
+    min-width: 520px;
+  }
+
+  .fun-fact-card {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .decision-matrix-table {
+    min-width: 480px;
+  }
+
+  .decision-matrix-table thead th {
+    font-size: 0.7rem;
+  }
+
+  .matrix-scroll {
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .solution-pitch {
@@ -3860,6 +4118,7 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   background: linear-gradient(180deg, rgba(1,42,70,0.04), rgba(47,143,84,0.03));
 }
 
+
 .overview-intro {
   max-width: 780px;
   font-size: 1.05rem;
@@ -3908,28 +4167,85 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   color: var(--ocean-900);
 }
 
+
+.phases-hero {
+  background: linear-gradient(135deg, rgba(1,42,70,0.85), rgba(47,143,84,0.7));
+  color: var(--white);
+  padding: clamp(4rem, 9vw, 5.6rem) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.phases-hero-inner {
+  display: grid;
+  gap: 1.9rem;
+  max-width: 900px;
+}
+
+.phases-hero .hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  margin: 0 0 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+}
+
+.phases-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--white);
+}
+
+.phases-hero .hero-subtitle {
+  margin: 0;
+  font-size: 1.08rem;
+  max-width: 64ch;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.92);
+}
+
+.phases-hero-note {
+  background: rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
 .phases-section .phase-roadmap {
   display: grid;
   gap: 1.75rem;
 }
 
+.design-phases {
+  padding: clamp(3.8rem, 9vw, 5rem) 0;
+  background: var(--white);
+  border-bottom: 1px solid rgba(1,42,70,0.08);
+}
+
+.phases-section .phase-roadmap {
+  display: grid;
+  gap: 2rem;
+}
+
 .phases-section .phase-card {
   position: relative;
-  border-radius: 26px;
-  padding: 2.5rem 2.25rem;
-  color: var(--white);
-  box-shadow: var(--shadow);
+  border-radius: 22px;
+  padding: clamp(2rem, 5vw, 2.6rem);
+  color: var(--charcoal);
+  box-shadow: 0 14px 34px rgba(1,42,70,0.08);
   overflow: hidden;
   display: grid;
   gap: 1.75rem;
+  background: var(--white);
+  border: 1px solid rgba(1,42,70,0.08);
 }
 
 .phases-section .phase-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(140deg, rgba(255,255,255,0.25), transparent 55%);
-  pointer-events: none;
+  display: none;
 }
 
 .phases-section .phase-card-header {
@@ -3941,6 +4257,7 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   gap: 1rem;
 }
 
+
 .phases-section .phase-title-group {
   display: grid;
   gap: 0.35rem;
@@ -3948,24 +4265,24 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
 
 .phases-section .phase-label {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 700;
-  opacity: 0.75;
+  color: var(--muted);
 }
 
 .phases-section .phase-card-header h3 {
   margin: 0;
-  font-size: 1.9rem;
+  font-size: 1.65rem;
   font-weight: 800;
-  color: var(--white);
+  color: var(--ocean-900);
 }
 
 .phases-section .phase-duration {
   margin: 0;
   font-weight: 600;
-  opacity: 0.85;
+  color: var(--muted);
 }
 
 .phases-section .phase-chip {
@@ -3974,11 +4291,12 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   justify-content: center;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.18);
-  font-size: 0.85rem;
+  background: rgba(4,90,141,0.1);
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--ocean-700);
 }
 
 .phases-section .phase-card-body {
@@ -3986,47 +4304,281 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  gap: clamp(1.6rem, 4vw, 2.2rem);
 }
 
 .phases-section .phase-track {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .phases-section .phase-track h4 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--ocean-900);
 }
 
 .phases-section .phase-track ul {
   margin: 0;
   padding-left: 1.1rem;
   display: grid;
-  gap: 0.55rem;
+  gap: 0.65rem;
   font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--charcoal);
 }
 
 .phases-section .phase-track li {
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.phases-section .phase-card--planning {
-  background: linear-gradient(135deg, #1d5cff, #2b6ee8 55%, #003a9b);
+.implementation-section.phases-section {
+  background: linear-gradient(180deg, rgba(1,42,70,0.03), rgba(47,143,84,0.02));
 }
 
-.phases-section .phase-card--construction {
-  background: linear-gradient(135deg, #1c8d5a, #1f9a65 55%, #136437);
+.implementation-section.phases-section .phase-roadmap {
+  gap: clamp(1.7rem, 4vw, 2.5rem);
 }
 
-.phases-section .phase-card--planting {
-  background: linear-gradient(135deg, #e17024, #cf6114 55%, #a64a0a);
+.implementation-section.phases-section .phase-card {
+  border: none;
+  border-top: none;
+  color: var(--white);
+  box-shadow: 0 26px 46px rgba(12,42,98,0.28);
+  border-radius: 24px;
+  padding: clamp(2.2rem, 5vw, 2.9rem);
 }
 
-.phases-section .phase-card--verification {
-  background: linear-gradient(135deg, #6a4be8, #5133d4 55%, #3519a8);
+.implementation-section.phases-section .phase-card-header h3,
+.implementation-section.phases-section .phase-track h4 {
+  color: var(--white);
+}
+
+.implementation-section.phases-section .phase-card-header h3 {
+  font-size: clamp(1.85rem, 3.4vw, 2.15rem);
+}
+
+.implementation-section.phases-section .phase-label,
+.implementation-section.phases-section .phase-duration {
+  color: rgba(255,255,255,0.82);
+}
+
+.implementation-section.phases-section .phase-track ul {
+  color: rgba(255,255,255,0.92);
+  list-style: disc;
+}
+
+.implementation-section.phases-section .phase-track li::marker {
+  color: rgba(255,255,255,0.6);
+}
+
+.implementation-section.phases-section .phase-chip {
+  background: rgba(255,255,255,0.96);
+  color: var(--charcoal);
+  box-shadow: 0 10px 18px rgba(4,30,70,0.18);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  padding: 0.42rem 1.1rem;
+}
+
+.implementation-section.phases-section .phase-card--planning {
+  background: linear-gradient(135deg, #3271f2, #1f4dd6);
+}
+
+.implementation-section.phases-section .phase-card--planning .phase-chip {
+  color: #1f4dd6;
+}
+
+.implementation-section.phases-section .phase-card--construction {
+  background: linear-gradient(135deg, #2f9254, #1f6f3c);
+}
+
+.implementation-section.phases-section .phase-card--construction .phase-chip {
+  color: #1f6f3c;
+}
+
+.implementation-section.phases-section .phase-card--planting {
+  background: linear-gradient(135deg, #e47a2b, #c85c0f);
+}
+
+.implementation-section.phases-section .phase-card--planting .phase-chip {
+  color: #c85c0f;
+}
+
+.implementation-section.phases-section .phase-card--verification {
+  background: linear-gradient(135deg, #7a54ff, #5a33d4);
+}
+
+.implementation-section.phases-section .phase-card--verification .phase-chip {
+  color: #5a33d4;
+}
+
+.implementation-section.phases-section .phase-card--planning,
+.implementation-section.phases-section .phase-card--construction,
+.implementation-section.phases-section .phase-card--planting,
+.implementation-section.phases-section .phase-card--verification {
+  border-top: none;
+}
+
+.implementation-section.phases-section .phase-card-body {
+  gap: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.design-phases .phase-card {
+  background: var(--white);
+  color: var(--charcoal);
+  border: 1px solid rgba(1,42,70,0.08);
+}
+
+.design-phases .phase-card--planning {
+  border-top: 4px solid #2b6ee8;
+}
+
+.design-phases .phase-card--construction {
+  border-top: 4px solid #1f9a65;
+}
+
+.design-phases .phase-card--planting {
+  border-top: 4px solid #cf6114;
+}
+
+.design-phases .phase-card--verification {
+  border-top: 4px solid #5133d4;
+}
+
+
+.phase-visual-card {
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+  color: var(--muted);
+}
+
+.phase-visual-card figcaption {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+
+.visual-block {
+  min-height: 165px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(1,42,70,0.05);
+}
+
+.visual-block::after,
+.visual-block::before {
+  content: "";
+  position: absolute;
+}
+
+.visual-flow {
+  background: linear-gradient(120deg, rgba(4,90,141,0.12), rgba(47,143,84,0.18));
+}
+
+.visual-flow::after {
+  inset: 22% 14%;
+  background: repeating-linear-gradient(90deg, rgba(4,90,141,0.3), rgba(4,90,141,0.3) 6px, transparent 6px, transparent 12px);
+  border-radius: 16px;
+}
+
+.visual-bund {
+  background: linear-gradient(140deg, rgba(208,178,128,0.18), rgba(150,110,60,0.18));
+}
+
+.visual-bund::before {
+  inset: 18% 14%;
+  background: repeating-linear-gradient(180deg, rgba(117,85,42,0.35), rgba(117,85,42,0.35) 5px, transparent 5px, transparent 11px);
+  border-radius: 14px;
+}
+
+.visual-bund::after {
+  left: 0;
+  right: 0;
+  bottom: 16%;
+  height: 22%;
+  background: linear-gradient(0deg, rgba(1,42,70,0.25), transparent);
+}
+
+.visual-mangrove {
+  background: linear-gradient(130deg, rgba(47,143,84,0.18), rgba(135,194,116,0.18));
+}
+
+.visual-mangrove::before {
+  inset: 18% 16% 36% 16%;
+  background: repeating-linear-gradient(90deg, rgba(47,143,84,0.35), rgba(47,143,84,0.35) 4px, transparent 4px, transparent 10px);
+  border-radius: 18px;
+}
+
+.visual-mangrove::after {
+  inset: auto 14% 14% 14%;
+  height: 30%;
+  background: linear-gradient(0deg, rgba(117,85,42,0.3), transparent 70%);
+}
+
+.visual-loop {
+  background: radial-gradient(circle at 30% 30%, rgba(47,143,84,0.22), transparent 60%), radial-gradient(circle at 70% 70%, rgba(4,90,141,0.22), transparent 58%);
+}
+
+.visual-loop::after {
+  inset: 20%;
+  border-radius: 50%;
+  border: 2px dashed rgba(4,90,141,0.3);
+}
+
+
+.phase-callout {
+  padding: clamp(3.5rem, 9vw, 4.2rem) 0;
+  background: #f6faf8;
+  border-top: 1px solid rgba(1,42,70,0.08);
+  border-bottom: 1px solid rgba(1,42,70,0.08);
+}
+
+.phase-callout-card {
+  margin: 0;
+  background: linear-gradient(135deg, rgba(1,42,70,0.85), rgba(47,143,84,0.75));
+  border-radius: 20px;
+  padding: 1.9rem 2rem;
+  box-shadow: 0 18px 36px rgba(1,42,70,0.22);
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.92);
+}
+
+.phase-callout-card strong {
+  color: var(--white);
+}
+
+.phases-closure {
+  padding: clamp(3.5rem, 9vw, 4.2rem) 0;
+  background: var(--white);
+  border-top: 1px solid rgba(1,42,70,0.08);
+}
+
+.phases-closure-inner {
+  max-width: 720px;
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.phases-closure-inner h2 {
+  margin: 0;
+  color: var(--ocean-900);
+  font-size: 2rem;
+}
+
+.phases-closure-inner p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
 }
 
 @media (max-width: 768px) {
@@ -4036,11 +4588,15 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   }
 
   .phases-section .phase-card-header h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .phases-section .phase-card-body {
     gap: 1.4rem;
+  }
+
+  .phase-visual-card figcaption {
+    color: var(--muted);
   }
 }
 
@@ -4094,6 +4650,9 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   gap: 0.85rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
   justify-content: center;
+  justify-items: center;
+  max-width: 720px;
+  width: 100%;
 }
 
 .implementation-photos figcaption {
@@ -4155,6 +4714,145 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   background: linear-gradient(135deg, rgba(191,226,255,0.45), rgba(47,143,84,0.2));
   border: 1px solid rgba(1,42,70,0.12);
   box-shadow: var(--shadow);
+}
+
+.budget-context {
+  margin: 0 0 1.25rem;
+  max-width: 880px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+.pilot-budget {
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, rgba(1,42,70,0.03), rgba(47,143,84,0.06));
+  border-radius: calc(var(--radius) + 4px);
+  padding: 1.6rem 1.8rem;
+  border: 1px solid rgba(1,42,70,0.08);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.pilot-budget h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--ocean-900);
+}
+
+.pilot-budget ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--charcoal);
+  font-size: 0.98rem;
+}
+
+.design-tip {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.grants-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(191,226,255,0.18));
+}
+
+.grants-intro {
+  margin: 0 0 1.6rem;
+  max-width: 840px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+.grant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.3rem, 3vw, 1.9rem);
+  margin-bottom: 1.8rem;
+}
+
+.grant-card {
+  background: var(--white);
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(1,42,70,0.1);
+  box-shadow: 0 18px 32px rgba(13,63,102,0.12);
+  padding: 1.8rem 1.6rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.grant-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.grant-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ocean-900);
+}
+
+.grant-relevance,
+.grant-focus {
+  margin: 0;
+  color: var(--charcoal);
+  line-height: 1.6;
+  font-size: 0.97rem;
+}
+
+.grant-note {
+  margin: 0 0 1.2rem;
+  max-width: 860px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+
+.blue-carbon-section {
+  background: linear-gradient(135deg, rgba(47,143,84,0.06), rgba(1,42,70,0.05));
+}
+
+.blue-carbon-intro {
+  margin: 0 0 1.8rem;
+  max-width: 860px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+.blue-carbon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.3rem, 3vw, 2rem);
+}
+
+.blue-carbon-card {
+  background: var(--white);
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(1,42,70,0.1);
+  box-shadow: var(--shadow);
+  padding: 1.7rem 1.5rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.blue-carbon-card h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--ocean-900);
+}
+
+.blue-carbon-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .finance-section {
@@ -4647,19 +5345,7 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   line-height: 1.6;
 }
 
-@media (min-width: 1100px) {
-  .sdg-card-grid {
-    grid-template-columns: repeat(3, minmax(0,1fr));
-  }
-
-  .sdg-card--impact {
-    grid-column: span 2;
-    grid-row: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .sdg-card-grid,
+@media (max-width: 1100px) {
   .sdg-stats-grid {
     gap: 1.2rem;
   }
@@ -5474,6 +6160,7 @@ label{display:block;margin:.5rem 0 .25rem;color:var(--muted)}
   .hero-actions .btn,
   .hero-actions .btn-secondary {
     width: 100%;
+    
     text-align: center;
   }
 }
