@@ -7,6 +7,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-scoped rules for the solution hero media (keeps changes local to this page) */
+    .solution-hero-media-frame {
+      position: relative;
+      overflow: hidden;
+      padding-inline: 0; /* remove inner padding so image can fill */
+      width: 100%;
+      min-height: clamp(12rem, 32vh, 18rem);
+      border-radius: 26px;
+      background: transparent;
+    }
+    .solution-hero-media-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 26px;
+    }
+    @media (min-width: 900px) {
+      .solution-hero-media-frame { min-height: clamp(16rem, 40vh, 28rem); }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -44,8 +68,10 @@
             <span>Scalable for the Strait</span>
           </div>
           <figure class="solution-hero-media" aria-labelledby="solution-hero-media-caption">
-            <figcaption id="solution-hero-media-caption">Brushwood bunds and mangrove belts transform exposed seawalls into community-led living buffers.</figcaption>
-            <div class="solution-hero-media-frame" aria-hidden="true"></div>
+            <figcaption id="solution-hero-media-caption">Figure X. Coastal Protection</figcaption>
+            <div class="solution-hero-media-frame" aria-hidden="true">
+              <img src="WetlandsInternational_IMG_3900-e1456994769975_web2.jpg" alt="Coastal protection using natural measures" loading="lazy">
+            </div>
           </figure>
           <div class="hero-actions">
             <a class="btn primary" href="#what-is-ircs">See the System</a>
@@ -453,6 +479,7 @@
           <p>We built a <strong>Mini Wetland Sediment Trapping System</strong> to watch how IRCS cells hold mud. Once the flow slowed, fines dropped out just like behind the bunds.</p>
           <p>Testing showed about <strong>75% of the mud stayed put</strong>, proving that calmer water rebuilds the shore.</p>
           <p class="muted">Our test proved the key idea: slow the water, and the land comes back.</p>
+          <p class="muted" style="margin-top:0.6rem">Technical notes, full prototype data, and modelling details have been moved to the <a href="annex.html#modelling-methods">Technical Annex</a> to keep this page focused.</p>
         </div>
         <figure class="prototype-visual" aria-labelledby="prototype-caption">
           <figcaption id="prototype-caption">Prototype insights</figcaption>
@@ -482,19 +509,17 @@
             <li role="listitem"><strong>Observation:</strong> suspended fines settle within ninety seconds while coarse grains anchor the base.</li>
             <li role="listitem"><strong>Takeaway:</strong> slowing water regains ground and builds a planting bed for mangroves.</li>
           </ul>
-          <p>Swap this placeholder with the 9&nbsp;:&nbsp;16 clip once it clears review.</p>
+          
         </div>
         <div class="prototype-demo-media">
-          <div class="prototype-reel-shell" role="img" aria-label="Placeholder frame for the Mini Wetland Sediment Trapping prototype reel">
-            <div class="prototype-reel-frame">
-              <div class="reel-placeholder">
-                <div class="reel-icon" aria-hidden="true"></div>
-                <p>Insert Mini Wetland Sediment Trapping reel here</p>
-                <span class="reel-hint">Replace this block with a <code>video</code> tag or social embed when the asset is ready.</span>
-              </div>
-            </div>
+          <!-- Self-hosted fallback: use local MP4 if embedding fails. File path (project root): Prototype DEMO.mp4 -->
+          <div class="video-embed--local" style="max-width:480px;margin:0 auto;">
+            <video controls playsinline preload="metadata" class="site-video" style="width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+              <source src="Prototype%20DEMO.mp4" type="video/mp4">
+              Your browser does not support HTML5 video. <a href="Prototype%20DEMO.mp4">Download the video</a>.
+            </video>
           </div>
-          <p class="reel-note">Recommended format: MP4 (1080&nbsp;&times;&nbsp;1920), playsinline, under 25&nbsp;MB.</p>
+          <p class="reel-note">If the video still does not play, try opening it directly: <a href="Prototype%20DEMO.mp4" target="_blank" rel="noopener">Open local video</a> or view on YouTube: <a href="https://youtu.be/OF6Hatbtsvc" target="_blank" rel="noopener">https://youtu.be/OF6Hatbtsvc</a></p>
         </div>
       </div>
     </section>
