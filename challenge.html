@@ -7,6 +7,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Scoped styles for the challenge banner placeholder video only */
+    .challenge-banner-photo{ position:relative; overflow:hidden; }
+    .challenge-banner-photo .banner-video{
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; object-position:center right; z-index:0;
+      pointer-events:none; opacity:0.96; border-radius:inherit;
+      display:block;
+    }
+    /* Ensure caption and other content stay above the video */
+    .challenge-banner figcaption{ position:relative; z-index:1; }
+    /* Page-scoped rules to keep the map/photo inside its placeholder */
+    .challenge-map .map-frame { overflow: hidden; max-width: 640px; margin: 0.5rem 0; border-radius: var(--radius); }
+    .challenge-map .map-frame .map-image { display:block; width:100%; height:auto; object-fit:cover; border-radius: calc(var(--radius) - 4px); }
+    @media (max-width: 720px) {
+      .challenge-map .map-frame { max-width: 100%; }
+    }
+    /* Scoped rules for seawall alternate photo (keeps changes page-local) */
+    .seawall-alternative-photo .seawall-photo { display:block; width:100%; height:auto; max-width:480px; border-radius: calc(var(--radius) - 4px); }
+    @media (max-width: 720px) {
+      .seawall-alternative-photo .seawall-photo { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -45,7 +68,13 @@
         </div>
         <figure class="challenge-banner" aria-labelledby="challenge-banner-caption">
           <figcaption id="challenge-banner-caption">Saibai foreshore under repeated tidal stress — banner placeholder awaiting final imagery.</figcaption>
-          <div class="challenge-banner-photo" aria-hidden="true"></div>
+          <div class="challenge-banner-photo" aria-hidden="true">
+            <!-- Local hero banner video: nm.mp4. This is scoped to the banner placeholder only. -->
+            <video class="banner-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+              <source src="nm.mp4" type="video/mp4">
+              Your browser does not support the video tag. <a href="nm.mp4" target="_blank" rel="noopener">Open video</a>.
+            </video>
+          </div>
         </figure>
         <div class="hero-actions">
           <a class="btn primary" href="#context">Understand the Threat</a>
@@ -63,7 +92,7 @@
         </header>
         <div class="challenge-context-body">
           <p>Saibai's Bureau of Meteorology tide gauge shows sea level now sits 0.18&nbsp;m higher than the 1992 baseline, with the January 2024 king tide peaking at 3.59&nbsp;m. Each surge seeps through the peat flats, salting wells and cassava plots within hours.</p>
-          <p>During the February 2024 monsoon burst, eight days of storm tide closed the airstrip and the school road. Families moved vehicles onto the church mound while waves cut fresh ruts beside the seawall.</p>
+          <p>During the February 2024 monsoon burst, eight days of storm tide closed the airstrip and the school road. Families moved vehicles onto the church mound while waves cut fresh ruts beside the seawall (Allam, 2024).</p>
           <div class="context-fact-list" role="list" aria-label="Key climate context for Saibai Island">
             <div class="context-fact" role="listitem">
               <span class="context-fact-label">Elevation</span>
@@ -80,8 +109,11 @@
           </div>
         </div>
         <figure class="challenge-map" aria-labelledby="map-caption">
-          <div class="map-frame" role="presentation"></div>
-          <figcaption id="map-caption">Saibai Island within the Torres Strait, just south of Papua New Guinea. (Map placeholder)</figcaption>
+          <div class="map-frame" role="presentation">
+            <!-- Inserted map image: ensure `qc95_13.jpg` is placed in the project root or assets/ -->
+            <img src="qc95_13.jpg" alt="Coverage map: Saibai Island and Torres Strait Treaty Protected Zone" class="map-image" loading="lazy">
+          </div>
+          <figcaption id="map-caption">Figure X. Coverage of the Torres Strait Treaty Protected Zone.</figcaption>
         </figure>
       </div>
     </section>
@@ -162,7 +194,7 @@
         <div class="seawall-body">
           <article class="seawall-problem">
             <h3>Seawalls lock Saibai into a losing loop</h3>
-            <p>Families remember the 2010 concrete wall: within two wet seasons the footings sank, waves bounced sideways, and new washouts opened beside the school road.</p>
+            <p>Families remember the 2010 concrete wall: within two wet seasons the footings sank, waves bounced sideways, and new washouts opened beside the school road (Allam, 2024).</p>
             <div class="seawall-impact-grid" role="list">
               <div class="seawall-impact-card impact-environment" role="listitem">
                 <h4>Environmental Cost</h4>
@@ -204,8 +236,8 @@
               </ul>
             </article>
             <figure class="seawall-alternative-photo" aria-labelledby="seawall-alt-caption">
-              <div class="photo-placeholder" role="presentation"></div>
-              <figcaption id="seawall-alt-caption">IRCS crew installing brushwood modules — final imagery to replace placeholder.</figcaption>
+              <img src="4-Brushwood-Faggots-Staked-in-Place-To-Accrete-Sediment-1320x812.jpg" alt="IRCS crew installing brushwood modules" class="seawall-photo" loading="lazy">
+              <figcaption id="seawall-alt-caption">Figure X. Brushwood Faggots/Fascines.</figcaption>
             </figure>
           </div>
         </div>
