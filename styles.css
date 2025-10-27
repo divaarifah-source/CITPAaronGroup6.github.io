@@ -369,6 +369,32 @@ p {
   color: var(--ocean-900);
 }
 
+/* Accountability note card (small, horizontal, subtle) */
+.accountability-note-section {
+  padding: clamp(1rem, 2.5vw, 1.6rem) 0;
+  background: transparent;
+}
+
+.accountability-card {
+  background: var(--white);
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid rgba(1,42,70,0.08);
+  box-shadow: 0 10px 26px rgba(1,42,70,0.06);
+  padding: 1rem 1.25rem;
+  max-width: 1100px;
+  margin: 0.6rem auto;
+  display: flex;
+  align-items: center;
+}
+
+.accountability-note {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+
 .ai-log-section {
   padding: clamp(3.6rem, 8vw, 5.4rem) 0;
   background: linear-gradient(135deg, rgba(1,42,70,0.04), rgba(233,222,207,0.28));
