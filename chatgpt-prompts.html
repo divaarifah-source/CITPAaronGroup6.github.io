@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT Prompts — IRCS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Scoped navbar toggler bars and animation for this page only */
+    .chatgpt-navbar .navbar-toggler {border: none; padding: .4rem}
+    .chatgpt-navbar .toggler-bars {display:inline-block; width:28px; height:20px; position:relative}
+    .chatgpt-navbar .toggler-bars .bar {position:absolute; left:0; right:0; height:2px; background:var(--ocean-900); border-radius:2px; transition:transform .28s ease, opacity .2s ease}
+    .chatgpt-navbar .toggler-bars .bar:nth-child(1){top:2px}
+    .chatgpt-navbar .toggler-bars .bar:nth-child(2){top:9px}
+    .chatgpt-navbar .toggler-bars .bar:nth-child(3){top:16px}
+    .chatgpt-navbar .navbar-toggler.open .bar:nth-child(1){transform: translateY(7px) rotate(45deg)}
+    .chatgpt-navbar .navbar-toggler.open .bar:nth-child(2){opacity:0}
+    .chatgpt-navbar .navbar-toggler.open .bar:nth-child(3){transform: translateY(-7px) rotate(-45deg)}
+    /* Ensure navbar links are readable on this page */
+    .chatgpt-navbar .nav-link{color:var(--charcoal)}
+    .chatgpt-navbar .nav-link.active{background:linear-gradient(90deg,var(--ocean-900),var(--ocean-700));color:var(--white)}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white chatgpt-navbar" aria-label="Main navigation">
+        <a class="navbar-brand" href="exec.html"><span style="color:var(--mangrove-600);margin-right:.4rem;font-weight:800">EWB Challenge - IRCS</span></a>
+        <button id="chatgptToggler" class="navbar-toggler" type="button" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-bars" aria-hidden="true">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="exec.html">Executive</a></li>
+            <li class="nav-item"><a class="nav-link" href="challenge.html">Challenge</a></li>
+            <li class="nav-item"><a class="nav-link" href="solution.html">Solution</a></li>
+            <li class="nav-item"><a class="nav-link" href="detailed.html">Detailed Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="implement.html">Implementation</a></li>
+            <li class="nav-item"><a class="nav-link" href="annex.html">Technical Annex</a></li>
+            <li class="nav-item"><a class="nav-link" href="team-declarations.html">Team Declarations</a></li>
+            <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="phases-hero" aria-labelledby="chatgpt-title">
+      <div class="container phases-hero-inner">
+        <div>
+          <p class="hero-kicker">AI Prompt Log</p>
+          <h1 id="chatgpt-title">ChatGPT Prompt Log (GPT-5) — Oct 2025</h1>
+          <p class="hero-subtitle">All interactions conducted using OpenAI’s ChatGPT (GPT-5) during October 2025. Prompts and outputs supported ideation, design, and planning for the IRCS project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="scoping-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="scoping-title">1️⃣ Project Scoping &amp; Research Phase</h2>
+          <p class="section-lead">Selected prompts and a short note on the outcome.</p>
+        </header>
+
+        <div class="table-scroll">
+          <table class="impl-table">
+            <thead>
+              <tr>
+                <th>Date (approx.)</th>
+                <th>Prompt summary</th>
+                <th>Purpose / Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oct 22–25, 2025</td>
+                <td>"Validate the problem statement and solution for Saibai Island; include scholarly sources."</td>
+                <td>ChatGPT generated a validation report linking climate-driven erosion in the Torres Strait to low-tech regenerative designs, with references to tidal wetlands and brushwood bunds.</td>
+              </tr>
+              <tr>
+                <td>Oct 25, 2025</td>
+                <td>"Draft a pilot plan with flowcharts for both a real-world and university-scale IRCS implementation."</td>
+                <td>Produced visualized flowcharts outlining phased deployment (Foundational → Structural → Ecological → Sustainability).</td>
+              </tr>
+              <tr>
+                <td>Oct 25–26, 2025</td>
+                <td>"Clarify the role of sediment nourishment and tidal channel reopening with sources and videos."</td>
+                <td>Explained hydrodynamic processes in accessible language and suggested videos for student audiences.</td>
+              </tr>
+              <tr>
+                <td>Oct 26, 2025</td>
+                <td>"Investigate existing tidal wetland restoration in Saibai Island and provide references."</td>
+                <td>Summarized recent work from CSIRO, TSRA, and GBRF confirming partial tidal wetland re-establishment.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="prototype-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="prototype-title">2️⃣ Prototype Development Phase</h2>
+        </header>
+        <div class="commitment-grid">
+          <article class="commitment-card">
+            <h3>Design physical prototype</h3>
+            <p>Prompt: "Design a physical prototype demonstrating IRCS functions using wave tank and mini wetland models."</p>
+            <p>Outcome: Multiple prototype ideas were generated and refined to a simple mini wetland sediment-trapping model validated by mentors.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Materials &amp; testing</h3>
+            <p>Prompt: "List required materials and step-by-step setup for the prototype."</p>
+            <p>Outcome: Student-feasible build plan with recyclable materials and suggested testing methods.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Wave simulation</h3>
+            <p>Prompt: "Clarify how wave simulation works and why water movement is essential for erosion modeling."</p>
+            <p>Outcome: Hydrodynamic processes explained with analogies and video references for teaching.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="webdev-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="webdev-title">3️⃣ Website &amp; Design Development Phase</h2>
+        </header>
+        <div class="commitment-grid">
+          <article class="commitment-card">
+            <h3>Site structure guidance</h3>
+            <p>Prompt: "Guide for creating Executive, Challenge, Solution, Detailed Design, Implementation, and Technical Annex pages."</p>
+            <p>Outcome: Structured page-by-page guidelines and content flow used to build this site in Visual Studio Code.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>CTA &amp; visuals</h3>
+            <p>Prompt: "Create CTA button design linking to 'Team Declaration + AI Prompt Log' page."</p>
+            <p>Outcome: UI guidance used to place navigation and CTAs linking prompt logs.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Diagram flow</h3>
+            <p>Prompt: "Add diagram showing Tidal Flow → Brushwood Bunds → Sediment Trapping → Mangrove Growth → Stabilized Shoreline."</p>
+            <p>Outcome: Prompt sequence and SVG structure provided for implementation in site code.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="budgeting-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="budgeting-title">4️⃣ Budgeting &amp; Financial Modelling</h2>
+        </header>
+        <div class="commitment-grid">
+          <article class="commitment-card">
+            <h3>Budget revision</h3>
+            <p>Prompt: "Revise budget and resource plausibility for IRCS with more realistic local labour and material allocation."</p>
+            <p>Outcome: Expanded pilot budget to AUD 30k–50k with &gt;50% allocated to local labour.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Grant research</h3>
+            <p>Prompt: "Research and estimate grant funding ranges and blue-carbon revenue figures."</p>
+            <p>Outcome: Numeric guidance used in site content; grants and blue carbon numbers informed planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="presentation-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="presentation-title">5️⃣ Presentation Preparation &amp; Communication</h2>
+        </header>
+        <div class="commitment-grid">
+          <article class="commitment-card">
+            <h3>Rewrite Q&amp;A</h3>
+            <p>Prompt: "Rewrite Q&A responses in conversational language for university presentation."</p>
+            <p>Outcome: Simplified technical answers for clarity while preserving scientific integrity.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Deck copy</h3>
+            <p>Prompt: "Provide short and engaging cover title options and section subtitles for presentation deck."</p>
+            <p>Outcome: Multiple creative heading options produced for slides and site headers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation-section" aria-labelledby="references-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="references-title">6️⃣ Reference &amp; Documentation Support</h2>
+        </header>
+        <div class="commitment-grid">
+          <article class="commitment-card">
+            <h3>Reference lists</h3>
+            <p>Prompt: "Generate reference list in APA 7th format, categorized by Technical, Cultural, Policy, and Visual sources."</p>
+            <p>Outcome: Compiled references used across the Technical Annex and design pages.</p>
+          </article>
+          <article class="commitment-card">
+            <h3>Final report</h3>
+            <p>Prompt: "Assist with final report compilation (detailed version + website adaptation)."</p>
+            <p>Outcome: Synthesized project discussions into cohesive final report copy and web-adapted content.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="phases-closure" aria-labelledby="chatgpt-closure">
+      <div class="container phases-closure-inner">
+        <h2 id="chatgpt-closure">About this log</h2>
+        <p>This page summarizes key ChatGPT interactions used to support IRCS development. Prompts and excerpts are paraphrased for clarity; full prompts and outputs are stored in project records where permissions allow.</p>
+        <p class="muted">Generated using OpenAI’s ChatGPT (GPT-5) for academic assistance under the EWB Challenge 2025 project scope.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">IRCS</div>
+        <div>
+          <p class="footer-title">IRCS Project</p>
+          <p class="footer-subtitle">Saibai Island Community</p>
+        </div>
+      </div>
+      <div class="footer-cta">
+        <a class="footer-cta-link" href="references.html">View References Library</a>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> IRCS — For Saibai</p>
+        <p class="footer-client">Client: Torres Strait Regional Council · Integrated Restorative Coastal System</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Page-scoped navbar improvements: toggler animation and active-link highlighting
+    (function () {
+      try {
+        const toggler = document.getElementById('chatgptToggler');
+        const collapseEl = document.getElementById('mainNavbar');
+        if (toggler && collapseEl) {
+          // Use Bootstrap events if available
+          collapseEl.addEventListener('show.bs.collapse', function () {
+            toggler.classList.add('open');
+          });
+          collapseEl.addEventListener('hide.bs.collapse', function () {
+            toggler.classList.remove('open');
+          });
+          // Also toggle open class on manual click (covers no-bootstrap cases)
+          toggler.addEventListener('click', function () {
+            toggler.classList.toggle('open');
+            // If the collapse plugin isn't present, toggle aria-expanded for a11y
+            const expanded = toggler.getAttribute('aria-expanded') === 'true';
+            toggler.setAttribute('aria-expanded', String(!expanded));
+            if (collapseEl.classList.contains('show')) collapseEl.classList.remove('show'); else collapseEl.classList.add('show');
+          });
+        }
+
+        // Active link highlighting: add .active to the matching nav link by filename
+        const navLinks = Array.from(document.querySelectorAll('.chatgpt-navbar .nav-link'));
+        const path = window.location.pathname.split('/').pop().toLowerCase();
+        if (path) {
+          navLinks.forEach(a => {
+            const href = a.getAttribute('href') || '';
+            if (href.toLowerCase() === path) {
+              a.classList.add('active');
+              a.setAttribute('aria-current', 'page');
+            }
+          });
+        }
+      } catch (e) { /* noop */ }
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
