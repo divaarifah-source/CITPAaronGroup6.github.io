@@ -44,8 +44,11 @@
           <span>Long-term care</span>
         </div>
         <figure class="implementation-banner" aria-labelledby="hero-banner-caption">
-          <figcaption id="hero-banner-caption">Saibai coastline &mdash; banner placeholder awaiting final imagery</figcaption>
-          <div class="banner-photo" aria-hidden="true"></div>
+          <figcaption id="hero-banner-caption">Figure X. Saibai Island Community Profile.</figcaption>
+          <div class="banner-photo" aria-hidden="true">
+            <!-- Inserted community profile image; keep within placeholder -->
+            <img src="Saibai-torres-strait-island-tsirc.png" alt="Saibai Island community profile map" class="implementation-banner-image" loading="lazy" style="display:block;width:100%;height:auto;object-fit:cover;border-radius:inherit;">
+          </div>
         </figure>
       </div>
     </section>
@@ -251,12 +254,163 @@
             </tbody>
           </table>
         </div>
+        <!-- Page-scoped styles and lightbox to keep layout changes local and thumbnails small -->
+        <style>
+        /* Small, contained photo-card thumbnails for implementation photos */
+        .implementation-photos .photo-card {
+          width: 100%;
+          max-width: 220px;
+          border-radius: 8px;
+          overflow: hidden;
+          background: var(--white);
+          box-shadow: var(--shadow);
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .implementation-photos .photo-card img {
+          display: block;
+          width: 100%;
+          height: 140px;
+          object-fit: cover;
+        }
+        .implementation-photos .photo-caption {
+          padding: 0.5rem 0.6rem;
+          font-size: 0.9rem;
+          color: var(--muted);
+          text-align: center;
+        }
+
+        /* Lightbox (page-scoped to avoid collisions) */
+        #ircs-lightbox {
+          position: fixed;
+          inset: 0;
+          display: none; /* shown when active */
+          align-items: center;
+          justify-content: center;
+          background: rgba(0,0,0,0.8);
+          z-index: 1200;
+        }
+        #ircs-lightbox.active { display: flex; }
+        #ircs-lightbox .lb-inner {
+          position: relative;
+          max-width: 94%;
+          max-height: 94%;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+        }
+        #ircs-lightbox img {
+          max-width: 100%;
+          max-height: 80vh;
+          border-radius: 8px;
+          box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        }
+        #ircs-lightbox .lb-caption {
+          margin-top: 0.5rem;
+          color: #fff;
+          font-size: 0.95rem;
+          text-align: center;
+        }
+        #ircs-lightbox .lb-close {
+          position: absolute;
+          top: -0.5rem;
+          right: -0.5rem;
+          background: transparent;
+          border: none;
+          color: #fff;
+          font-size: 1.6rem;
+          cursor: pointer;
+          padding: 0.4rem 0.6rem;
+        }
+        /* Make the thumbnail anchors fill the card so keyboard users can focus */
+        .implementation-photos .photo-card a.photo-link{ display:block; }
+        .implementation-photos .photo-card a.photo-link:focus { outline: 3px solid rgba(13,110,253,0.25); outline-offset: 3px; }
+        </style>
+
         <figure class="implementation-photos" aria-labelledby="implementation-photos-caption">
           <figcaption id="implementation-photos-caption">Community at work &mdash; insert photos of training, bund construction, and mangrove planting.</figcaption>
-          <div class="photo-card">Community Training</div>
-          <div class="photo-card">Bund Construction</div>
-          <div class="photo-card">Mangrove Planting</div>
+
+          <div class="photo-card" role="figure" aria-labelledby="photo-1-caption">
+            <a class="photo-link" href="community.png" data-full="community.png" aria-label="Open community training image in full size">
+              <img src="community.png" alt="Community training workshop with local participants" loading="lazy">
+            </a>
+            <div id="photo-1-caption" class="photo-caption">Figure X. Community-Based Adaptive Strategy Example.</div>
+          </div>
+
+          <div class="photo-card" role="figure" aria-labelledby="photo-2-caption">
+            <a class="photo-link" href="535923cbcd97ekadappakam1-scaled.jpg" data-full="535923cbcd97ekadappakam1-scaled.jpg" aria-label="Open Mura Kaimel Sipa exhibit image in full size">
+              <img src="535923cbcd97ekadappakam1-scaled.jpg" alt="Exhibit and community display: Mura Kaimel Sipa" loading="lazy">
+            </a>
+            <div id="photo-2-caption" class="photo-caption">Figure X. Mura Kaimel Sipa (Our Sea, Our Land) Exhibit.</div>
+          </div>
+
+          <div class="photo-card" role="figure" aria-labelledby="photo-3-caption">
+            <a class="photo-link" href="8_37886.jpg" data-full="8_37886.jpg" aria-label="Open mangrove planting image in full size">
+              <img src="8_37886.jpg" alt="Community mangrove planting for coastal protection" loading="lazy">
+            </a>
+            <div id="photo-3-caption" class="photo-caption">Figure X. Coastal Protection Initiatives.</div>
+          </div>
         </figure>
+
+        <!-- Lightbox markup (page-scoped to this file) -->
+        <div id="ircs-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+          <div class="lb-inner">
+            <button class="lb-close" aria-label="Close image">✕</button>
+            <img src="" alt="" id="ircs-lightbox-img">
+            <div class="lb-caption" id="ircs-lightbox-caption"></div>
+          </div>
+        </div>
+
+        <script>
+        (function(){
+          const lightbox = document.getElementById('ircs-lightbox');
+          const lbImg = document.getElementById('ircs-lightbox-img');
+          const lbCaption = document.getElementById('ircs-lightbox-caption');
+          const closeBtn = lightbox.querySelector('.lb-close');
+
+          function openLightbox(src, captionText, altText){
+            lbImg.src = src;
+            lbImg.alt = altText || '';
+            lbCaption.textContent = captionText || '';
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            // trap focus on close button
+            closeBtn.focus();
+          }
+
+          function closeLightbox(){
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            lbImg.src = '';
+            lbImg.alt = '';
+            lbCaption.textContent = '';
+          }
+
+          // Attach handlers to links
+          document.querySelectorAll('.implementation-photos a.photo-link').forEach(function(link){
+            link.addEventListener('click', function(e){
+              e.preventDefault();
+              const full = link.getAttribute('data-full') || link.href;
+              const card = link.closest('.photo-card');
+              const captionEl = card ? card.querySelector('.photo-caption') : null;
+              const captionText = captionEl ? captionEl.textContent : '';
+              const img = link.querySelector('img');
+              const altText = img ? img.alt : '';
+              openLightbox(full, captionText, altText);
+            });
+            // allow Enter key to open when focused
+            link.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); link.click(); } });
+          });
+
+          // Close interactions
+          closeBtn.addEventListener('click', closeLightbox);
+          lightbox.addEventListener('click', function(e){
+            if(e.target === lightbox) closeLightbox();
+          });
+          document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
+        })();
+        </script>
       </div>
     </section>
 
@@ -468,7 +622,8 @@
           <h2>Monitoring &amp; Evaluation</h2>
           <p class="section-lead">Evidence-based feedback keeps performance strong and guides growth decisions.</p>
         </header>
-        <p>The test phase is checked monthly by the CSG, with reports every 3 months by the university team. Data guides each fix and shows when it's safe to expand.</p>
+  <p>The test phase is checked monthly by the CSG, with reports every 3 months by the university team. Data guides each fix and shows when it's safe to expand.</p>
+  <p class="muted" style="margin-top:0.6rem">See the <a href="annex.html#modelling-methods">Technical Annex</a> for full monitoring datasets, model runs, and parameter tables (archived for reviewers).</p>
         <div class="indicator-grid" aria-label="Pilot success indicators">
           <article class="indicator-card">
             <h3>Sediment Height Change</h3>
